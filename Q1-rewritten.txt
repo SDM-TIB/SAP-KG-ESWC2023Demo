@@ -1,0 +1,14 @@
+SELECT DISTINCT ?s1 ?o3 
+WHERE {
+{?s1 <wdt:P40> ?o.
+?s1 <wdt:P509> ?o1.
+?s1 <wdt:P19> ?o2.
+?s1 <wdt:P8810> ?o3.}
+}
+union
+{
+{?s1 <wdt:P40> ?o.
+?s1 <wdt:P509> ?o1.
+?s1 <wdt:P19> ?o2.
+?s1 <wdt:P25> ?o3.}
+}

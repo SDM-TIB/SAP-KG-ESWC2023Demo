@@ -1,0 +1,2738 @@
+﻿Film Domain
+1.
+Original Query (count: 43)
+select distinct ?s1 ?o where {
+?s1 <http://dbpedia.org/property/background> ?b.
+?s1 <http://dbpedia.org/property/budget> ?o1.
+?s1 a <http://dbpedia.org/ontology/Film>.
+?s1 <http://dbpedia.org/property/producer> ?o }
+
+
+Rewritten Query (count: 75)                                               
+select distinct ?s1 ?o where {
+{?s1 <http://dbpedia.org/property/background> ?b.
+?s1 <http://dbpedia.org/property/budget> ?o1.
+?s1 a <http://dbpedia.org/ontology/Film>.
+?s1 <http://dbpedia.org/property/producer> ?o.
+ }
+UNION
+{?s1 <http://dbpedia.org/property/background> ?b.
+?s1 <http://dbpedia.org/property/budget> ?o1.
+?s1 a <http://dbpedia.org/ontology/Film>.
+?s1 <http://dbpedia.org/ontology/producer> ?o .
+}
+UNION
+{?s1 <http://dbpedia.org/property/background> ?b.
+?s1 <http://dbpedia.org/property/budget> ?o1.
+?s1 a <http://dbpedia.org/ontology/Film>.
+?s1 <http://dbpedia.org/property/executiveProducer> ?o .
+}
+UNION
+{?s1 <http://dbpedia.org/property/background> ?b.
+?s1 <http://dbpedia.org/property/budget> ?o1.
+?s1 a <http://dbpedia.org/ontology/Film>.
+?s1 <http://dbpedia.org/ontology/executiveProducer> ?o .
+}
+}
+
+
+Rewritten Query (count: 52) 
+select distinct ?s1 ?o where {
+{?s1 <http://dbpedia.org/property/background> ?b.
+?s1 <http://dbpedia.org/property/budget> ?o1.
+?s1 a <http://dbpedia.org/ontology/Film>.
+?s1 <http://dbpedia.org/property/producer> ?o.
+ }
+UNION
+{?s1 <http://dbpedia.org/property/background> ?b.
+?s1 <http://dbpedia.org/property/budget> ?o1.
+?s1 a <http://dbpedia.org/ontology/Film>.
+?s1 <http://dbpedia.org/ontology/producer> ?o .
+}
+UNION
+{?s1 <http://dbpedia.org/property/background> ?b.
+?s1 <http://dbpedia.org/property/budget> ?o1.
+?s1 a <http://dbpedia.org/ontology/Film>.
+?s1 <http://dbpedia.org/property/producedDocumentary> ?o .
+}
+UNION
+{?s1 <http://dbpedia.org/property/background> ?b.
+?s1 <http://dbpedia.org/property/budget> ?o1.
+?s1 a <http://dbpedia.org/ontology/Film>.
+?s1 <http://dbpedia.org/property/projectManager> ?o .
+}
+UNION
+{?s1 <http://dbpedia.org/property/background> ?b.
+?s1 <http://dbpedia.org/property/budget> ?o1.
+?s1 a <http://dbpedia.org/ontology/Film>.
+?s1 <http://dbpedia.org/property/producers> ?o .
+}
+}
+ 
+2.
+Original Query (count:249)
+select distinct ?s1 ?o  where {
+?s1 <http://dbpedia.org/property/title> ?b.
+?s1 <http://dbpedia.org/property/name> ?o1.
+?s1 a <http://dbpedia.org/ontology/Film>.
+?s1 <http://dbpedia.org/ontology/birthPlace> ?o.
+ }
+Rewritten Query (count: 588)
+select distinct ?s1 ?o where {
+{?s1 <http://dbpedia.org/property/title> ?b.
+?s1 <http://dbpedia.org/property/name> ?o1.
+?s1 a <http://dbpedia.org/ontology/Film>.
+?s1 <http://dbpedia.org/ontology/birthPlace> ?o.
+ }
+UNION
+{?s1 <http://dbpedia.org/property/title> ?b.
+?s1 <http://dbpedia.org/property/name> ?o1.
+?s1 a <http://dbpedia.org/ontology/Film>.
+?s1 <http://dbpedia.org/ontology/birthDate> ?o .
+}
+UNION
+{?s1 <http://dbpedia.org/property/title> ?b.
+?s1 <http://dbpedia.org/property/name> ?o1.
+?s1 a <http://dbpedia.org/ontology/Film>.
+?s1 <http://dbpedia.org/property/birthPlace> ?o .
+}
+UNION
+{?s1 <http://dbpedia.org/property/title> ?b.
+?s1 <http://dbpedia.org/property/name> ?o1.
+?s1 a <http://dbpedia.org/ontology/Film>.
+?s1 <http://dbpedia.org/property/birthDate> ?o .
+}
+} 
+Rewritten Query (count:12826) 
+select distinct ?s1 ?o where {
+{?s1 <http://dbpedia.org/property/title> ?b.
+?s1 <http://dbpedia.org/property/name> ?o1.
+?s1 a <http://dbpedia.org/ontology/Film>.
+?s1 <http://dbpedia.org/ontology/birthPlace> ?o.
+ }
+UNION
+{?s1 <http://dbpedia.org/property/title> ?b.
+?s1 <http://dbpedia.org/property/name> ?o1.
+?s1 a <http://dbpedia.org/ontology/Film>.
+?s1 <http://dbpedia.org/ontology/location> ?o .
+}
+UNION
+{?s1 <http://dbpedia.org/property/title> ?b.
+?s1 <http://dbpedia.org/property/name> ?o1.
+?s1 a <http://dbpedia.org/ontology/Film>.
+?s1 <http://dbpedia.org/ontology/director> ?o .
+}
+UNION
+{?s1 <http://dbpedia.org/property/title> ?b.
+?s1 <http://dbpedia.org/property/name> ?o1.
+?s1 a <http://dbpedia.org/ontology/Film>.
+?s1 <http://dbpedia.org/property/birthDate> ?o .
+}
+} 
+
+
+3.
+Original Query (count:584)
+select distinct ?s1  ?o where {
+?s1 <http://dbpedia.org/property/genre> ?b.
+?s1 <http://dbpedia.org/property/language> ?o1.
+?s1 a <http://dbpedia.org/ontology/Film>.
+?s1 <http://dbpedia.org/property/creator> ?o.
+ }
+Rewritten Query (count:17444 )
+select distinct ?s1 ?o where {
+{?s1 <http://dbpedia.org/property/genre> ?b.
+?s1 <http://dbpedia.org/property/language> ?o1.
+?s1 a <http://dbpedia.org/ontology/Film>.
+?s1 <http://dbpedia.org/property/creator> ?o.
+ }
+UNION
+{?s1 <http://dbpedia.org/property/genre> ?b.
+?s1 <http://dbpedia.org/property/language> ?o1.
+?s1 a <http://dbpedia.org/ontology/Film>.
+?s1 <http://dbpedia.org/property/producer> ?o .
+}
+UNION
+{?s1 <http://dbpedia.org/property/genre> ?b.
+?s1 <http://dbpedia.org/property/language> ?o1.
+?s1 a <http://dbpedia.org/ontology/Film>.
+?s1 <http://dbpedia.org/ontology/director> ?o .
+}
+UNION
+{?s1 <http://dbpedia.org/property/genre> ?b.
+?s1 <http://dbpedia.org/property/language> ?o1.
+?s1 a <http://dbpedia.org/ontology/Film>.
+?s1 <http://dbpedia.org/ontology/creator> ?o .
+}
+} 
+Rewritten Query (count:19062) 
+select distinct ?s1 ?o where {
+{?s1 <http://dbpedia.org/property/genre> ?b.
+?s1 <http://dbpedia.org/property/language> ?o1.
+?s1 a <http://dbpedia.org/ontology/Film>.
+?s1 <http://dbpedia.org/property/creator> ?o.
+ }
+union
+{
+?s1 <http://dbpedia.org/property/genre> ?b.
+?s1 <http://dbpedia.org/property/language> ?o1.
+?s1 a <http://dbpedia.org/ontology/Film>.
+?s1 <http://dbpedia.org/property/lmusic> ?o.
+ }
+union
+{
+?s1 <http://dbpedia.org/property/genre> ?b.
+?s1 <http://dbpedia.org/property/language> ?o1.
+?s1 a <http://dbpedia.org/ontology/Film>.
+?s1 <http://dbpedia.org/property/producer> ?o.
+ }
+union
+{
+?s1 <http://dbpedia.org/property/genre> ?b.
+?s1 <http://dbpedia.org/property/language> ?o1.
+?s1 a <http://dbpedia.org/ontology/Film>.
+?s1 <http://dbpedia.org/ontology/director> ?o.
+ }
+union
+{
+?s1 <http://dbpedia.org/property/genre> ?b.
+?s1 <http://dbpedia.org/property/language> ?o1.
+?s1 a <http://dbpedia.org/ontology/Film>.
+?s1 <http://dbpedia.org/property/artist> ?o.
+ }}
+
+
+
+
+4.
+Original Query (count:1)
+select distinct ?s1 ?o where {
+?s1 <http://dbpedia.org/property/arranger> ?b.
+?s1 <http://dbpedia.org/property/caption> ?o1.
+?s1 a <http://dbpedia.org/ontology/Film>.
+?s1 <http://dbpedia.org/property/artist> ?o.
+ }
+Rewritten Query (count:5)
+select distinct ?s1 ?o where {
+{?s1 <http://dbpedia.org/property/arranger> ?b.
+?s1 <http://dbpedia.org/property/caption> ?o1.
+?s1 a <http://dbpedia.org/ontology/Film>.
+?s1 <http://dbpedia.org/property/artist> ?o.
+ }
+UNION
+{?s1 <http://dbpedia.org/property/arranger> ?b.
+?s1 <http://dbpedia.org/property/caption> ?o1.
+?s1 a <http://dbpedia.org/ontology/Film>.
+?s1 <http://dbpedia.org/property/narrator> ?o .
+}
+UNION
+{?s1 <http://dbpedia.org/property/arranger> ?b.
+?s1 <http://dbpedia.org/property/caption> ?o1.
+?s1 a <http://dbpedia.org/ontology/Film>.
+?s1 <http://dbpedia.org/ontology/starring> ?o .
+}
+UNION
+{?s1 <http://dbpedia.org/property/arranger> ?b.
+?s1 <http://dbpedia.org/property/caption> ?o1.
+?s1 a <http://dbpedia.org/ontology/Film>.
+?s1 <http://dbpedia.org/property/starring> ?o .
+}
+} 
+
+
+Rewritten Query (count:9) 
+select distinct ?s1 ?o where {
+{
+?s1 <http://dbpedia.org/property/arranger> ?b.
+?s1 <http://dbpedia.org/property/caption> ?o1.
+?s1 a <http://dbpedia.org/ontology/Film>.
+?s1 <http://dbpedia.org/property/artist> ?o.
+ }
+
+
+union
+{
+?s1 <http://dbpedia.org/property/arranger> ?b.
+?s1 <http://dbpedia.org/property/caption> ?o1.
+?s1 a <http://dbpedia.org/ontology/Film>.
+?s1 <http://dbpedia.org/property/arranger> ?o.
+ }
+union
+{
+?s1 <http://dbpedia.org/property/arranger> ?b.
+?s1 <http://dbpedia.org/property/caption> ?o1.
+?s1 a <http://dbpedia.org/ontology/Film>.
+?s1 <http://dbpedia.org/property/caption> ?o.
+ }
+union
+{
+?s1 <http://dbpedia.org/property/arranger> ?b.
+?s1 <http://dbpedia.org/property/caption> ?o1.
+?s1 a <http://dbpedia.org/ontology/Film>.
+?s1 <http://dbpedia.org/property/producer> ?o.
+ }
+union
+{
+?s1 <http://dbpedia.org/property/arranger> ?b.
+?s1 <http://dbpedia.org/property/caption> ?o1.
+?s1 a <http://dbpedia.org/ontology/Film>.
+?s1 <http://dbpedia.org/ontology/creator> ?o.
+ }}
+
+
+5.
+Original Query (count:72)
+select distinct ?s1 ?o where {
+?s1 <http://dbpedia.org/property/gross> ?b.
+?s1 <http://dbpedia.org/property/editing> ?o1.
+?s1 a <http://dbpedia.org/ontology/Film>.
+?s1 <http://dbpedia.org/property/filename> ?o.
+ }
+Rewritten Query (count:90)
+select distinct ?s1 ?o where {
+{?s1 <http://dbpedia.org/property/gross> ?b.
+?s1 <http://dbpedia.org/property/editing> ?o1.
+?s1 a <http://dbpedia.org/ontology/Film>.
+?s1 <http://dbpedia.org/property/filename> ?o.
+ }
+UNION
+{?s1 <http://dbpedia.org/property/gross> ?b.
+?s1 <http://dbpedia.org/property/editing> ?o1.
+?s1 a <http://dbpedia.org/ontology/Film>.
+?s1 <http://dbpedia.org/property/films> ?o .
+}
+UNION
+{?s1 <http://dbpedia.org/property/gross> ?b.
+?s1 <http://dbpedia.org/property/editing> ?o1.
+?s1 a <http://dbpedia.org/ontology/Film>.
+?s1 <http://dbpedia.org/ontology/title> ?o .
+}
+UNION
+{?s1 <http://dbpedia.org/property/gross> ?b.
+?s1 <http://dbpedia.org/property/editing> ?o1.
+?s1 a <http://dbpedia.org/ontology/Film>.
+?s1 <http://dbpedia.org/property/series> ?o .
+}
+} 
+Rewritten Query (count:86) 
+select distinct ?s1 ?o where {
+{
+?s1 <http://dbpedia.org/property/gross> ?b.
+?s1 <http://dbpedia.org/property/editing> ?o1.
+?s1 a <http://dbpedia.org/ontology/Film>.
+?s1 <http://dbpedia.org/property/filename> ?o.
+ }
+
+
+union
+{
+?s1 <http://dbpedia.org/property/gross> ?b.
+?s1 <http://dbpedia.org/property/editing> ?o1.
+?s1 a <http://dbpedia.org/ontology/Film>.
+?s1 <http://dbpedia.org/property/works> ?o.
+ }
+
+
+union
+{
+?s1 <http://dbpedia.org/property/gross> ?b.
+?s1 <http://dbpedia.org/property/editing> ?o1.
+?s1 a <http://dbpedia.org/ontology/Film>.
+?s1 <http://dbpedia.org/property/films> ?o.
+ }
+union
+{
+?s1 <http://dbpedia.org/property/gross> ?b.
+?s1 <http://dbpedia.org/property/editing> ?o1.
+?s1 a <http://dbpedia.org/ontology/Film>.
+?s1 <http://dbpedia.org/ontology/title> ?o.
+ }
+}
+
+
+
+
+6.
+Original Query (count:4634)
+select distinct ?s1 ?o where {
+?s1 <http://dbpedia.org/property/genre> ?b.
+?s1 <http://dbpedia.org/property/starring> ?o1.
+?s1 a <http://dbpedia.org/ontology/Film>.
+?s1 <http://dbpedia.org/property/music> ?o.
+ }
+Rewritten Query (count:4751)
+select distinct ?s1 ?o where {
+{?s1 <http://dbpedia.org/property/genre> ?b.
+?s1 <http://dbpedia.org/property/starring> ?o1.
+?s1 a <http://dbpedia.org/ontology/Film>.
+?s1 <http://dbpedia.org/property/music> ?o.
+ }
+UNION
+{?s1 <http://dbpedia.org/property/genre> ?b.
+?s1 <http://dbpedia.org/property/starring> ?o1.
+?s1 a <http://dbpedia.org/ontology/Film>.
+?s1 <http://dbpedia.org/property/song> ?o .
+}
+UNION
+{?s1 <http://dbpedia.org/property/genre> ?b.
+?s1 <http://dbpedia.org/property/starring> ?o1.
+?s1 a <http://dbpedia.org/ontology/Film>.
+?s1 <http://dbpedia.org/property/musicBy> ?o .
+}
+UNION
+{?s1 <http://dbpedia.org/property/genre> ?b.
+?s1 <http://dbpedia.org/property/starring> ?o1.
+?s1 a <http://dbpedia.org/ontology/Film>.
+?s1 <http://dbpedia.org/property/lmusic> ?o .
+}
+UNION
+{?s1 <http://dbpedia.org/property/genre> ?b.
+?s1 <http://dbpedia.org/property/starring> ?o1.
+?s1 a <http://dbpedia.org/ontology/Film>.
+?s1 <http://dbpedia.org/property/allMusic> ?o .
+}
+} 
+Rewritten Query (count:5571) 
+select distinct ?s1 ?o where {
+{?s1 <http://dbpedia.org/property/genre> ?b.
+?s1 <http://dbpedia.org/property/starring> ?o1.
+?s1 a <http://dbpedia.org/ontology/Film>.
+?s1 <http://dbpedia.org/property/music> ?o.
+ }
+union
+{
+?s1 <http://dbpedia.org/property/genre> ?b.
+?s1 <http://dbpedia.org/property/starring> ?o1.
+?s1 a <http://dbpedia.org/ontology/Film>.
+?s1 <http://dbpedia.org/property/series> ?o.
+ }
+union
+{
+?s1 <http://dbpedia.org/property/genre> ?b.
+?s1 <http://dbpedia.org/property/starring> ?o1.
+?s1 a <http://dbpedia.org/ontology/Film>.
+?s1 <http://dbpedia.org/property/musicBy> ?o.
+ }
+
+
+union
+{
+?s1 <http://dbpedia.org/property/genre> ?b.
+?s1 <http://dbpedia.org/property/starring> ?o1.
+?s1 a <http://dbpedia.org/ontology/Film>.
+?s1 <http://dbpedia.org/ontology/executiveProducer> ?o.
+ }
+
+
+} 
+
+
+
+
+
+
+7.
+Original Query (count:871)
+select distinct ?s1 ?o where {
+?s1 <http://dbpedia.org/property/director> ?b.
+?s1 <http://dbpedia.org/property/language> ?o1.
+?s1 a <http://dbpedia.org/ontology/Film>.
+?s1 <http://dbpedia.org/property/genre> ?o.
+ }
+Rewritten Query (count:2573)
+select distinct ?s1 ?o where {
+{?s1 <http://dbpedia.org/property/director> ?b.
+?s1 <http://dbpedia.org/property/language> ?o1.
+?s1 a <http://dbpedia.org/ontology/Film>.
+?s1 <http://dbpedia.org/property/genre> ?o.
+ }
+UNION
+{?s1 <http://dbpedia.org/property/director> ?b.
+?s1 <http://dbpedia.org/property/language> ?o1.
+?s1 a <http://dbpedia.org/ontology/Film>.
+?s1 <http://dbpedia.org/property/type> ?o .
+}
+UNION
+{?s1 <http://dbpedia.org/property/director> ?b.
+?s1 <http://dbpedia.org/property/language> ?o1.
+?s1 a <http://dbpedia.org/ontology/Film>.
+?s1 <http://dbpedia.org/property/label> ?o .
+}
+} 
+Rewritten Query (count:2590) 
+select distinct ?s1 ?o where {
+{?s1 <http://dbpedia.org/property/director> ?b.
+?s1 <http://dbpedia.org/property/language> ?o1.
+?s1 a <http://dbpedia.org/ontology/Film>.
+?s1 <http://dbpedia.org/property/genre> ?o.
+ }
+union
+{
+?s1 <http://dbpedia.org/property/director> ?b.
+?s1 <http://dbpedia.org/property/language> ?o1.
+?s1 a <http://dbpedia.org/ontology/Film>.
+?s1 <http://dbpedia.org/property/series> ?o.
+ }
+
+
+union
+{
+?s1 <http://dbpedia.org/property/director> ?b.
+?s1 <http://dbpedia.org/property/language> ?o1.
+?s1 a <http://dbpedia.org/ontology/Film>.
+?s1 <http://dbpedia.org/property/type> ?o.
+ }
+union
+{?s1 <http://dbpedia.org/property/director> ?b.
+?s1 <http://dbpedia.org/property/language> ?o1.
+?s1 a <http://dbpedia.org/ontology/Film>.
+?s1 <http://dbpedia.org/property/label> ?o .
+}
+
+
+}
+
+
+
+
+8.
+Original Query (count:2572)
+select distinct ?s1 ?o where {
+?s1 <http://dbpedia.org/ontology/activeYearsStartYear> ?b.
+?s1 <http://dbpedia.org/property/name> ?o1.
+?s1 a <http://dbpedia.org/ontology/Film>.
+?s1 <http://dbpedia.org/ontology/occupation> ?o.
+ }
+Rewritten Query (count:3222)
+select distinct ?s1 ?o where {
+{?s1 <http://dbpedia.org/ontology/activeYearsStartYear> ?b.
+?s1 <http://dbpedia.org/property/name> ?o1.
+?s1 a <http://dbpedia.org/ontology/Film>.
+?s1 <http://dbpedia.org/ontology/occupation> ?o.
+ }
+UNION
+{?s1 <http://dbpedia.org/ontology/activeYearsStartYear> ?b.
+?s1 <http://dbpedia.org/property/name> ?o1.
+?s1 a <http://dbpedia.org/ontology/Film>.
+?s1 <http://dbpedia.org/property/works> ?o .
+}
+UNION
+{?s1 <http://dbpedia.org/ontology/activeYearsStartYear> ?b.
+?s1 <http://dbpedia.org/property/name> ?o1.
+?s1 a <http://dbpedia.org/ontology/Film>.
+?s1 <http://dbpedia.org/property/position> ?o .
+}
+UNION
+{?s1 <http://dbpedia.org/ontology/activeYearsStartYear> ?b.
+?s1 <http://dbpedia.org/property/name> ?o1.
+?s1 a <http://dbpedia.org/ontology/Film>.
+?s1 <http://dbpedia.org/property/occupation> ?o .
+}
+} 
+Rewritten Query (count:2580) 
+select distinct ?s1 ?o where {
+{?s1 <http://dbpedia.org/ontology/activeYearsStartYear> ?b.
+?s1 <http://dbpedia.org/property/name> ?o1.
+?s1 a <http://dbpedia.org/ontology/Film>.
+?s1 <http://dbpedia.org/ontology/occupation> ?o.
+ }
+
+
+union
+{
+?s1 <http://dbpedia.org/ontology/activeYearsStartYear> ?b.
+?s1 <http://dbpedia.org/property/name> ?o1.
+?s1 a <http://dbpedia.org/ontology/Film>.
+?s1 <http://dbpedia.org/property/artist> ?o.
+ }
+union
+{
+?s1 <http://dbpedia.org/ontology/activeYearsStartYear> ?b.
+?s1 <http://dbpedia.org/property/name> ?o1.
+?s1 a <http://dbpedia.org/ontology/Film>.
+?s1 <http://dbpedia.org/ontology/executiveProducer> ?o.
+ }
+union
+{
+?s1 <http://dbpedia.org/ontology/activeYearsStartYear> ?b.
+?s1 <http://dbpedia.org/property/name> ?o1.
+?s1 a <http://dbpedia.org/ontology/Film>.
+?s1 <http://dbpedia.org/property/narrator> ?o.
+ }
+union
+{
+?s1 <http://dbpedia.org/ontology/activeYearsStartYear> ?b.
+?s1 <http://dbpedia.org/property/name> ?o1.
+?s1 a <http://dbpedia.org/ontology/Film>.
+?s1 <http://dbpedia.org/property/works> ?o.
+ }
+}
+
+
+9.
+Original Query (count:2237)
+select distinct ?s1 ?o where {
+?s1 <http://dbpedia.org/property/artist> ?b.
+?s1 <http://dbpedia.org/property/budget> ?o1.
+?s1 a <http://dbpedia.org/ontology/Film>.
+?s1 <http://dbpedia.org/property/studio> ?o.
+ }
+Rewritten Query (count:2248)
+select distinct ?s1 ?o where {
+{?s1 <http://dbpedia.org/property/artist> ?b.
+?s1 <http://dbpedia.org/property/budget> ?o1.
+?s1 a <http://dbpedia.org/ontology/Film>.
+?s1 <http://dbpedia.org/property/studio> ?o.
+ }
+UNION
+{?s1 <http://dbpedia.org/property/artist> ?b.
+?s1 <http://dbpedia.org/property/budget> ?o1.
+?s1 a <http://dbpedia.org/ontology/Film>.
+?s1 <http://dbpedia.org/property/location> ?o .
+}
+UNION
+{?s1 <http://dbpedia.org/property/artist> ?b.
+?s1 <http://dbpedia.org/property/budget> ?o1.
+?s1 a <http://dbpedia.org/ontology/Film>.
+?s1 <http://dbpedia.org/ontology/location> ?o .
+}
+UNION
+{?s1 <http://dbpedia.org/property/artist> ?b.
+?s1 <http://dbpedia.org/property/budget> ?o1.
+?s1 a <http://dbpedia.org/ontology/Film>.
+?s1 <http://dbpedia.org/property/company> ?o .
+}
+} 
+Rewritten Query (count:2567) 
+select distinct ?s1 ?o where {
+{?s1 <http://dbpedia.org/property/artist> ?b.
+?s1 <http://dbpedia.org/property/budget> ?o1.
+?s1 a <http://dbpedia.org/ontology/Film>.
+?s1 <http://dbpedia.org/property/studio> ?o.
+ }
+UNION
+{?s1 <http://dbpedia.org/property/artist> ?b.
+?s1 <http://dbpedia.org/property/budget> ?o1.
+?s1 a <http://dbpedia.org/ontology/Film>.
+?s1 <http://dbpedia.org/property/location> ?o .
+}
+UNION
+{?s1 <http://dbpedia.org/property/artist> ?b.
+?s1 <http://dbpedia.org/property/budget> ?o1.
+?s1 a <http://dbpedia.org/ontology/Film>.
+?s1 <http://dbpedia.org/property/background> ?o .
+}
+UNION
+{?s1 <http://dbpedia.org/property/artist> ?b.
+?s1 <http://dbpedia.org/property/budget> ?o1.
+?s1 a <http://dbpedia.org/ontology/Film>.
+?s1 <http://dbpedia.org/property/caption> ?o .
+}
+} 
+
+
+10.
+Original Query (count:1)
+select distinct ?s1 ?o where {
+?s1 <http://dbpedia.org/property/director> ?b.
+?s1 <http://dbpedia.org/property/length> ?o1.
+?s1 a <http://dbpedia.org/ontology/Film>.
+?s1 <http://dbpedia.org/ontology/licensee> ?o.
+ }
+Rewritten Query (count:11)
+select distinct ?s1 ?o where {
+{?s1 <http://dbpedia.org/property/director> ?b.
+?s1 <http://dbpedia.org/property/length> ?o1.
+?s1 a <http://dbpedia.org/ontology/Film>.
+?s1 <http://dbpedia.org/ontology/licensee> ?o.
+ }
+UNION
+{?s1 <http://dbpedia.org/property/director> ?b.
+?s1 <http://dbpedia.org/property/length> ?o1.
+?s1 a <http://dbpedia.org/ontology/Film>.
+?s1 <http://dbpedia.org/property/licensee> ?o .
+}
+UNION
+{?s1 <http://dbpedia.org/property/director> ?b.
+?s1 <http://dbpedia.org/property/length> ?o1.
+?s1 a <http://dbpedia.org/ontology/Film>.
+?s1 <http://dbpedia.org/property/licensedisbn> ?o .
+}
+UNION
+{?s1 <http://dbpedia.org/property/director> ?b.
+?s1 <http://dbpedia.org/property/length> ?o1.
+?s1 a <http://dbpedia.org/ontology/Film>.
+?s1 <http://dbpedia.org/property/licensedreldate> ?o .
+}
+}
+Rewritten Query (count:) 
+select distinct ?s1 ?o where {
+{?s1 <http://dbpedia.org/property/director> ?b.
+?s1 <http://dbpedia.org/property/length> ?o1.
+?s1 a <http://dbpedia.org/ontology/Film>.
+?s1 <http://dbpedia.org/ontology/licensee> ?o.
+ }
+UNION
+{?s1 <http://dbpedia.org/property/director> ?b.
+?s1 <http://dbpedia.org/property/length> ?o1.
+?s1 a <http://dbpedia.org/ontology/Film>.
+?s1 <http://dbpedia.org/property/licensee> ?o .
+}
+UNION
+{?s1 <http://dbpedia.org/property/director> ?b.
+?s1 <http://dbpedia.org/property/length> ?o1.
+?s1 a <http://dbpedia.org/ontology/Film>.
+?s1 <http://dbpedia.org/property/licensedisbn> ?o .
+}
+UNION
+{?s1 <http://dbpedia.org/property/director> ?b.
+?s1 <http://dbpedia.org/property/length> ?o1.
+?s1 a <http://dbpedia.org/ontology/Film>.
+?s1 <http://dbpedia.org/property/licensedreldate> ?o .
+}
+}
+
+
+
+
+Drug Domain
+1.
+Original Query (count:1)
+select distinct ?s1 ?o where {
+?s1 <http://dbpedia.org/property/diseasesdb> ?b.
+?s1 <http://dbpedia.org/property/field> ?o1.
+?s1 a <http://dbpedia.org/ontology/Drug>.
+?s1 <http://dbpedia.org/ontology/treatment> ?o.
+ }
+
+
+Rewritten Query (count:2)
+select distinct ?s1 ?o where {
+{?s1 <http://dbpedia.org/property/diseasesdb> ?b.
+?s1 <http://dbpedia.org/property/field> ?o1.
+?s1 a <http://dbpedia.org/ontology/Drug>.
+?s1 <http://dbpedia.org/ontology/treatment> ?o.
+ }
+UNION
+{?s1 <http://dbpedia.org/property/diseasesdb> ?b.
+?s1 <http://dbpedia.org/property/field> ?o1.
+?s1 a <http://dbpedia.org/ontology/Drug>.
+?s1 <http://dbpedia.org/property/medication> ?o .
+}
+UNION
+{?s1 <http://dbpedia.org/property/diseasesdb> ?b.
+?s1 <http://dbpedia.org/property/field> ?o1.
+?s1 a <http://dbpedia.org/ontology/Drug>.
+?s1 <http://dbpedia.org/property/treatment> ?o .
+}
+UNION
+{?s1 <http://dbpedia.org/property/diseasesdb> ?b.
+?s1 <http://dbpedia.org/property/field> ?o1.
+?s1 a <http://dbpedia.org/ontology/Drug>.
+?s1 <http://dbpedia.org/ontology/medication> ?o .
+}
+UNION
+{?s1 <http://dbpedia.org/property/diseasesdb> ?b.
+?s1 <http://dbpedia.org/property/field> ?o1.
+?s1 a <http://dbpedia.org/ontology/Drug>.
+?s1 <http://dbpedia.org/ontology/eMedicineSubject> ?o .
+}
+} 
+
+
+2.
+Original Query (count:94)
+select distinct ?s1 ?o where {
+?s1 <http://dbpedia.org/property/class> ?b.
+?s1 <http://dbpedia.org/property/component> ?o1.
+?s1 a <http://dbpedia.org/ontology/Drug>.
+?s1 <http://dbpedia.org/property/drugName> ?o.
+ }
+
+
+Rewritten Query (count:450)
+select distinct ?s1 ?o where {
+{?s1 <http://dbpedia.org/property/class> ?b.
+?s1 <http://dbpedia.org/property/component> ?o1.
+?s1 a <http://dbpedia.org/ontology/Drug>.
+?s1 <http://dbpedia.org/property/drugName> ?o.
+ }
+UNION
+{?s1 <http://dbpedia.org/property/class> ?b.
+?s1 <http://dbpedia.org/property/component> ?o1.
+?s1 a <http://dbpedia.org/ontology/Drug>.
+?s1 <http://dbpedia.org/ontology/alternativeName> ?o .
+}
+UNION
+{?s1 <http://dbpedia.org/property/class> ?b.
+?s1 <http://dbpedia.org/property/component> ?o1.
+?s1 a <http://dbpedia.org/ontology/Drug>.
+?s1 <http://dbpedia.org/property/name> ?o .
+}
+UNION
+{?s1 <http://dbpedia.org/property/class> ?b.
+?s1 <http://dbpedia.org/property/component> ?o1.
+?s1 a <http://dbpedia.org/ontology/Drug>.
+?s1 <http://dbpedia.org/property/indexLabel> ?o .
+}
+} 
+
+
+
+3.
+Original Query (count:9)
+select distinct ?s1 ?o where {
+?s1 <http://dbpedia.org/ontology/drugbank> ?b.
+?s1 <http://dbpedia.org/property/type> ?o1.
+?s1 a <http://dbpedia.org/ontology/Drug>.
+?s1 <http://dbpedia.org/property/source> ?o.
+ }
+
+
+Rewritten Query (count:156)
+select distinct ?s1 ?o where {
+{?s1 <http://dbpedia.org/ontology/drugbank> ?b.
+?s1 <http://dbpedia.org/property/type> ?o1.
+?s1 a <http://dbpedia.org/ontology/Drug>.
+?s1 <http://dbpedia.org/property/source> ?o.
+ }
+UNION
+{?s1 <http://dbpedia.org/ontology/drugbank> ?b.
+?s1 <http://dbpedia.org/property/type> ?o1.
+?s1 a <http://dbpedia.org/ontology/Drug>.
+?s1 <http://dbpedia.org/property/target> ?o.
+}
+UNION
+{?s1 <http://dbpedia.org/ontology/drugbank> ?b.
+?s1 <http://dbpedia.org/property/type> ?o1.
+?s1 a <http://dbpedia.org/ontology/Drug>.
+?s1 <http://dbpedia.org/property/class> ?o .
+}
+UNION
+{?s1 <http://dbpedia.org/ontology/drugbank> ?b.
+?s1 <http://dbpedia.org/property/type> ?o1.
+?s1 a <http://dbpedia.org/ontology/Drug>.
+?s1 <http://dbpedia.org/property/drugs.com> ?o .
+}
+} 
+
+
+
+4.
+Original Query (count:21)
+select distinct ?s1 ?o where {
+?s1 <http://dbpedia.org/property/dailymedid> ?b.
+?s1 <http://dbpedia.org/ontology/wikiPageWikiLink> ?o1.
+?s1 a <http://dbpedia.org/ontology/Drug>.
+?s1 <http://dbpedia.org/ontology/license> ?o.
+ }
+
+
+Rewritten Query (count:320)
+select distinct ?s1 ?o where {
+{?s1 <http://dbpedia.org/property/dailymedid> ?b.
+?s1 <http://dbpedia.org/ontology/wikiPageWikiLink> ?o1.
+?s1 a <http://dbpedia.org/ontology/Drug>.
+?s1 <http://dbpedia.org/ontology/license> ?o.
+ }
+UNION
+{?s1 <http://dbpedia.org/property/dailymedid> ?b.
+?s1 <http://dbpedia.org/ontology/wikiPageWikiLink> ?o1.
+?s1 a <http://dbpedia.org/ontology/Drug>.
+?s1 <http://dbpedia.org/property/licenceUs> ?o.
+}
+UNION
+{?s1 <http://dbpedia.org/property/dailymedid> ?b.
+?s1 <http://dbpedia.org/ontology/wikiPageWikiLink> ?o1.
+?s1 a <http://dbpedia.org/ontology/Drug>.
+?s1 <http://dbpedia.org/property/licenceEu> ?o.
+}
+} 
+
+
+
+5.
+Original Query (count:54)
+select distinct ?s1 ?o where {
+?s1 <http://dbpedia.org/property/image> ?b.
+?s1 <http://dbpedia.org/property/chirality> ?o1.
+?s1 a <http://dbpedia.org/ontology/Drug>.
+?s1 <http://dbpedia.org/property/caption> ?o.
+ }
+
+
+Rewritten Query (count:58)
+select distinct ?s1 ?o where {
+{?s1 <http://dbpedia.org/property/image> ?b.
+?s1 <http://dbpedia.org/property/chirality> ?o1.
+?s1 a <http://dbpedia.org/ontology/Drug>.
+?s1 <http://dbpedia.org/property/caption> ?o.
+ }
+UNION
+{?s1 <http://dbpedia.org/property/image> ?b.
+?s1 <http://dbpedia.org/property/chirality> ?o1.
+?s1 a <http://dbpedia.org/ontology/Drug>.
+?s1 <http://dbpedia.org/property/title> ?o.
+}
+UNION
+{?s1 <http://dbpedia.org/property/image> ?b.
+?s1 <http://dbpedia.org/property/chirality> ?o1.
+?s1 a <http://dbpedia.org/ontology/Drug>.
+?s1 <http://dbpedia.org/property/specLabel> ?o .
+}
+UNION
+{?s1 <http://dbpedia.org/property/image> ?b.
+?s1 <http://dbpedia.org/property/chirality> ?o1.
+?s1 a <http://dbpedia.org/ontology/Drug>.
+?s1 <http://dbpedia.org/property/description> ?o .
+}
+} 
+
+
+
+6.
+Original Query (count:8)
+select distinct ?s1 ?o where {
+?s1 <http://dbpedia.org/property/drugbank> ?b.
+?s1 <http://dbpedia.org/property/name> ?o1.
+?s1 a <http://dbpedia.org/ontology/Drug>.
+?s1 <http://dbpedia.org/property/casNumber> ?o.
+ }
+
+
+Rewritten Query (count:17)
+select distinct ?s1 ?o where {
+{?s1 <http://dbpedia.org/property/drugbank> ?b.
+?s1 <http://dbpedia.org/property/name> ?o1.
+?s1 a <http://dbpedia.org/ontology/Drug>.
+?s1 <http://dbpedia.org/property/casNumber> ?o.
+ }
+UNION
+{?s1 <http://dbpedia.org/property/drugbank> ?b.
+?s1 <http://dbpedia.org/property/name> ?o1.
+?s1 a <http://dbpedia.org/ontology/Drug>.
+?s1 <http://dbpedia.org/ontology/casNumber> ?o.
+}
+UNION
+{?s1 <http://dbpedia.org/property/drugbank> ?b.
+?s1 <http://dbpedia.org/property/name> ?o1.
+?s1 a <http://dbpedia.org/ontology/Drug>.
+?s1 <http://dbpedia.org/property/number> ?o.
+}
+UNION
+{?s1 <http://dbpedia.org/property/drugbank> ?b.
+?s1 <http://dbpedia.org/property/name> ?o1.
+?s1 a <http://dbpedia.org/ontology/Drug>.
+?s1 <http://dbpedia.org/property/ecNumber> ?o.
+}
+} 
+
+
+
+7.
+Original Query (count:2)
+select distinct ?s1 ?o where {
+?s1 <http://dbpedia.org/property/family> ?b.
+?s1 <http://dbpedia.org/property/name> ?o1.
+?s1 a <http://dbpedia.org/ontology/Drug>.
+?s1 <http://dbpedia.org/ontology/relative> ?o.
+ }
+
+
+Rewritten Query (count:5)
+select distinct ?s1 ?o where {
+{?s1 <http://dbpedia.org/property/family> ?b.
+?s1 <http://dbpedia.org/property/name> ?o1.
+?s1 a <http://dbpedia.org/ontology/Drug>.
+?s1 <http://dbpedia.org/ontology/relative> ?o.
+ }
+UNION
+{?s1 <http://dbpedia.org/property/family> ?b.
+?s1 <http://dbpedia.org/property/name> ?o1.
+?s1 a <http://dbpedia.org/ontology/Drug>.
+?s1 <http://dbpedia.org/property/relatives> ?o.
+}
+UNION
+{?s1 <http://dbpedia.org/property/family> ?b.
+?s1 <http://dbpedia.org/property/name> ?o1.
+?s1 a <http://dbpedia.org/ontology/Drug>.
+?s1 <http://dbpedia.org/property/child> ?o .
+}
+UNION
+{?s1 <http://dbpedia.org/property/family> ?b.
+?s1 <http://dbpedia.org/property/name> ?o1.
+?s1 a <http://dbpedia.org/ontology/Drug>.
+?s1 <http://dbpedia.org/property/siblings> ?o .
+}
+UNION
+{?s1 <http://dbpedia.org/property/family> ?b.
+?s1 <http://dbpedia.org/property/name> ?o1.
+?s1 a <http://dbpedia.org/ontology/Drug>.
+?s1 <http://dbpedia.org/property/siblingNames> ?o .
+}
+} 
+
+
+
+
+
+8.
+Original Query (count:1)
+select distinct ?s1 ?o where {
+?s1 <http://dbpedia.org/ontology/wikiPageID> ?b.
+?s1 <http://dbpedia.org/property/type> ?o1.
+?s1 a <http://dbpedia.org/ontology/Drug>.
+?s1 <http://dbpedia.org/ontology/product> ?o.
+ }
+
+
+Rewritten Query (count:6)
+select distinct ?s1 ?o where {
+{?s1 <http://dbpedia.org/ontology/wikiPageID> ?b.
+?s1 <http://dbpedia.org/property/type> ?o1.
+?s1 a <http://dbpedia.org/ontology/Drug>.
+?s1 <http://dbpedia.org/ontology/product> ?o.
+ }
+UNION
+{?s1 <http://dbpedia.org/ontology/wikiPageID> ?b.
+?s1 <http://dbpedia.org/property/type> ?o1.
+?s1 a <http://dbpedia.org/ontology/Drug>.
+?s1 <http://dbpedia.org/property/products> ?o.
+}
+UNION
+{?s1 <http://dbpedia.org/ontology/wikiPageID> ?b.
+?s1 <http://dbpedia.org/property/type> ?o1.
+?s1 a <http://dbpedia.org/ontology/Drug>.
+?s1 <http://dbpedia.org/ontology/industry> ?o .
+}
+UNION
+{?s1 <http://dbpedia.org/ontology/wikiPageID> ?b.
+?s1 <http://dbpedia.org/property/type> ?o1.
+?s1 a <http://dbpedia.org/ontology/Drug>.
+?s1 <http://dbpedia.org/property/industry> ?o .
+}
+} 
+
+
+
+9.
+Original Query (count:11)
+select distinct ?s1 ?o where {
+?s1  <http://dbpedia.org/property/type> ?b.
+?s1 <http://dbpedia.org/property/name> ?o1.
+?s1 a <http://dbpedia.org/ontology/Drug>.
+?s1 <http://dbpedia.org/ontology/location> ?o.
+ }
+
+
+Rewritten Query (count:23)
+select distinct ?s1 ?o where {
+{?s1  <http://dbpedia.org/property/type> ?b.
+?s1 <http://dbpedia.org/property/name> ?o1.
+?s1 a <http://dbpedia.org/ontology/Drug>.
+?s1 <http://dbpedia.org/ontology/location> ?o.
+ }
+UNION
+{?s1  <http://dbpedia.org/property/type> ?b.
+?s1 <http://dbpedia.org/property/name> ?o1.
+?s1 a <http://dbpedia.org/ontology/Drug>.
+?s1 <http://dbpedia.org/property/location> ?o.
+}
+UNION
+{?s1  <http://dbpedia.org/property/type> ?b.
+?s1 <http://dbpedia.org/property/name> ?o1.
+?s1 a <http://dbpedia.org/ontology/Drug>.
+?s1 <http://dbpedia.org/property/otherLocations> ?o .
+}
+UNION
+{?s1  <http://dbpedia.org/property/type> ?b.
+?s1 <http://dbpedia.org/property/name> ?o1.
+?s1 a <http://dbpedia.org/ontology/Drug>.
+?s1 <http://dbpedia.org/ontology/locatedInArea> ?o .
+}
+UNION
+{?s1  <http://dbpedia.org/property/type> ?b.
+?s1 <http://dbpedia.org/property/name> ?o1.
+?s1 a <http://dbpedia.org/ontology/Drug>.
+?s1 <http://dbpedia.org/property/place> ?o .
+}
+} 
+
+
+
+10.
+Original Query (count:2)
+select distinct ?s1 ?o where {
+?s1 <http://dbpedia.org/property/name> ?b.
+?s1 <http://purl.org/dc/terms/subject> ?o1.
+?s1 a <http://dbpedia.org/ontology/Drug>.
+?s1 <http://dbpedia.org/property/medicinenet> ?o.
+ }
+
+
+Rewritten Query (count:9)
+select distinct ?s1 ?o where {
+{?s1 <http://dbpedia.org/property/name> ?b.
+?s1 <http://purl.org/dc/terms/subject> ?o1.
+?s1 a <http://dbpedia.org/ontology/Drug>.
+?s1 <http://dbpedia.org/property/medicinenet> ?o.
+ }
+UNION
+{?s1 <http://dbpedia.org/property/name> ?b.
+?s1 <http://purl.org/dc/terms/subject> ?o1.
+?s1 a <http://dbpedia.org/ontology/Drug>.
+?s1 <http://dbpedia.org/property/emedicinetopic> ?o.
+}
+UNION
+{?s1 <http://dbpedia.org/property/name> ?b.
+?s1 <http://purl.org/dc/terms/subject> ?o1.
+?s1 a <http://dbpedia.org/ontology/Drug>.
+?s1 <http://dbpedia.org/ontology/eMedicineTopic> ?o .
+}
+UNION
+{?s1 <http://dbpedia.org/property/name> ?b.
+?s1 <http://purl.org/dc/terms/subject> ?o1.
+?s1 a <http://dbpedia.org/ontology/Drug>.
+?s1 <http://dbpedia.org/property/emedicine> ?o .
+}
+} 
+
+
+
+Person Domain
+1.
+Original Query (count:9846 )
+select distinct ?s1 ?o where {
+?s1 <http://dbpedia.org/property/birthDate> ?b.
+?s1 <http://dbpedia.org/property/caption> ?o.
+?s1 a <http://dbpedia.org/ontology/Person>.
+?s1 <http://dbpedia.org/ontology/child> ?o1.
+ }
+
+
+Rewritten Query (count:47676 )
+select distinct ?s1 ?o where {
+{?s1 <http://dbpedia.org/property/birthDate> ?b.
+?s1 <http://dbpedia.org/property/caption> ?o.
+?s1 a <http://dbpedia.org/ontology/Person>.
+?s1 <http://dbpedia.org/ontology/child> ?o1.
+}
+UNION
+{?s1 <http://dbpedia.org/property/birthDate> ?b.
+?s1 <http://dbpedia.org/property/caption> ?o.
+?s1 a <http://dbpedia.org/ontology/Person>.
+?s1 <http://dbpedia.org/property/children> ?o1.
+}
+UNION
+{?s1 <http://dbpedia.org/property/birthDate> ?b.
+?s1 <http://dbpedia.org/property/caption> ?o.
+?s1 a <http://dbpedia.org/ontology/Person>.
+?s1 <http://dbpedia.org/ontology/relative> ?o1.
+}
+UNION
+{?s1 <http://dbpedia.org/property/birthDate> ?b.
+?s1 <http://dbpedia.org/property/caption> ?o.
+?s1 a <http://dbpedia.org/ontology/Person>.
+?s1 <http://dbpedia.org/property/relatives> ?o1.
+}
+UNION
+{?s1 <http://dbpedia.org/property/birthDate> ?b.
+?s1 <http://dbpedia.org/property/caption> ?o.
+?s1 a <http://dbpedia.org/ontology/Person>.
+?s1 <http://dbpedia.org/ontology/spouse> ?o1.
+}
+} 
+
+
+Rewritten Query (count:46864 ) 
+select distinct ?s1 ?o where {
+{?s1 <http://dbpedia.org/property/birthDate> ?b.
+?s1 <http://dbpedia.org/property/caption> ?o.
+?s1 a <http://dbpedia.org/ontology/Person>.
+?s1 <http://dbpedia.org/ontology/child> ?o1 }
+union
+{
+?s1 <http://dbpedia.org/property/birthDate> ?b.
+?s1 <http://dbpedia.org/property/caption> ?o.
+?s1 a <http://dbpedia.org/ontology/Person>.
+?s1 <http://dbpedia.org/ontology/spouse> ?o1 }
+union
+{
+?s1 <http://dbpedia.org/property/birthDate> ?b.
+?s1 <http://dbpedia.org/property/caption> ?o.
+?s1 a <http://dbpedia.org/ontology/Person>.
+?s1 <http://dbpedia.org/property/children> ?o1 }
+union
+{
+?s1 <http://dbpedia.org/property/birthDate> ?b.
+?s1 <http://dbpedia.org/property/caption> ?o.
+?s1 a <http://dbpedia.org/ontology/Person>.
+?s1 <http://dbpedia.org/ontology/relative> ?o1 }}
+
+
+2.
+Original Query (count: 218)
+select distinct ?s1 ?o where {
+?s1 <http://dbpedia.org/property/name> ?b.
+?s1 <http://dbpedia.org/property/nationality> ?o.
+?s1 a <http://dbpedia.org/ontology/Person>.
+?s1 <http://dbpedia.org/property/influenced> ?o1.
+ }
+
+
+Rewritten Query (count:374 )
+select distinct ?s1 ?o where {
+{?s1 <http://dbpedia.org/property/name> ?b.
+?s1 <http://dbpedia.org/property/nationality> ?o.
+?s1 a <http://dbpedia.org/ontology/Person>.
+?s1 <http://dbpedia.org/property/influenced> ?o1.
+}
+UNION
+{?s1 <http://dbpedia.org/property/name> ?b.
+?s1 <http://dbpedia.org/property/nationality> ?o.
+?s1 a <http://dbpedia.org/ontology/Person>.
+?s1 <http://dbpedia.org/property/influences> ?o1.
+}
+UNION
+{?s1 <http://dbpedia.org/property/name> ?b.
+?s1 <http://dbpedia.org/property/nationality> ?o.
+?s1 a <http://dbpedia.org/ontology/Person>.
+?s1 <http://dbpedia.org/ontology/influenced> ?o1.
+}
+UNION
+{?s1 <http://dbpedia.org/property/name> ?b.
+?s1 <http://dbpedia.org/property/nationality> ?o.
+?s1 a <http://dbpedia.org/ontology/Person>.
+?s1 <http://dbpedia.org/ontology/influences> ?o1.
+}
+} 
+
+
+
+
+3.
+Original Query (count:278)
+select distinct ?s1 ?o where {
+?s1 <http://dbpedia.org/property/author> ?b.
+?s1 <http://dbpedia.org/property/date> ?o.
+?s1 a <http://dbpedia.org/ontology/Person>.
+?s1 <http://dbpedia.org/property/name> ?o1.
+ }
+
+
+Rewritten Query (count:287)
+select distinct ?s1 ?o where {
+{?s1 <http://dbpedia.org/property/author> ?b.
+?s1 <http://dbpedia.org/property/date> ?o.
+?s1 a <http://dbpedia.org/ontology/Person>.
+?s1 <http://dbpedia.org/property/name> ?o1.
+}
+UNION
+{?s1 <http://dbpedia.org/property/author> ?b.
+?s1 <http://dbpedia.org/property/date> ?o.
+?s1 a <http://dbpedia.org/ontology/Person>.
+?s1 <http://dbpedia.org/property/birthName> ?o1.
+}
+UNION
+{?s1 <http://dbpedia.org/property/author> ?b.
+?s1 <http://dbpedia.org/property/date> ?o.
+?s1 a <http://dbpedia.org/ontology/Person>.
+?s1 <http://dbpedia.org/ontology/birthName> ?o1.
+}
+UNION
+{?s1 <http://dbpedia.org/property/author> ?b.
+?s1 <http://dbpedia.org/property/date> ?o.
+?s1 a <http://dbpedia.org/ontology/Person>.
+?s1 <http://dbpedia.org/property/sname> ?o1.
+}
+} 
+
+
+4.
+Original Query (count:325)
+select distinct ?s1 ?o where {
+?s1 <http://dbpedia.org/property/name> ?b.
+?s1 <http://dbpedia.org/ontology/award> ?o.
+?s1 a <http://dbpedia.org/ontology/Person>.
+?s1 <http://dbpedia.org/ontology/country> ?o1.
+ }
+
+
+Rewritten Query (count:425)
+select distinct ?s1 ?o where {
+{?s1 <http://dbpedia.org/property/name> ?b.
+?s1 <http://dbpedia.org/ontology/award> ?o.
+?s1 a <http://dbpedia.org/ontology/Person>.
+?s1 <http://dbpedia.org/ontology/country> ?o1.
+}
+UNION
+{?s1 <http://dbpedia.org/property/name> ?b.
+?s1 <http://dbpedia.org/ontology/award> ?o.
+?s1 a <http://dbpedia.org/ontology/Person>.
+?s1 <http://dbpedia.org/property/countryofbirth> ?o1.
+}
+UNION
+{?s1 <http://dbpedia.org/property/name> ?b.
+?s1 <http://dbpedia.org/ontology/award> ?o.
+?s1 a <http://dbpedia.org/ontology/Person>.
+?s1 <http://dbpedia.org/property/country> ?o1.
+}
+UNION
+{?s1 <http://dbpedia.org/property/name> ?b.
+?s1 <http://dbpedia.org/ontology/award> ?o.
+?s1 a <http://dbpedia.org/ontology/Person>.
+?s1 <http://dbpedia.org/property/countryRepresented> ?o1.
+}
+UNION
+{?s1 <http://dbpedia.org/property/name> ?b.
+?s1 <http://dbpedia.org/ontology/award> ?o.
+?s1 a <http://dbpedia.org/ontology/Person>.
+?s1 <http://dbpedia.org/property/countryOfOrigin> ?o1.
+}
+} 
+
+
+5.
+Original Query (count:1461)
+select distinct ?s1 ?o where {
+?s1 <http://dbpedia.org/property/deathPlace> ?b.
+?s1 <http://dbpedia.org/property/image> ?o.
+?s1 a <http://dbpedia.org/ontology/Person>.
+?s1 <http://dbpedia.org/ontology/occupation> ?o1.
+ }
+
+
+Rewritten Query (count:1713)
+select distinct ?s1 ?o where {
+{?s1 <http://dbpedia.org/property/deathPlace> ?b.
+?s1 <http://dbpedia.org/property/image> ?o.
+?s1 a <http://dbpedia.org/ontology/Person>.
+?s1 <http://dbpedia.org/ontology/occupation> ?o1.
+}
+UNION
+{?s1 <http://dbpedia.org/property/deathPlace> ?b.
+?s1 <http://dbpedia.org/property/image> ?o.
+?s1 a <http://dbpedia.org/ontology/Person>.
+?s1 <http://dbpedia.org/property/occupation> ?o1.
+}
+UNION
+{?s1 <http://dbpedia.org/property/deathPlace> ?b.
+?s1 <http://dbpedia.org/property/image> ?o.
+?s1 a <http://dbpedia.org/ontology/Person>.
+?s1 <http://dbpedia.org/property/occupations> ?o1.
+}
+UNION
+{?s1 <http://dbpedia.org/property/deathPlace> ?b.
+?s1 <http://dbpedia.org/property/image> ?o.
+?s1 a <http://dbpedia.org/ontology/Person>.
+?s1 <http://dbpedia.org/property/careerPosition> ?o1.
+}
+UNION
+{?s1 <http://dbpedia.org/property/deathPlace> ?b.
+?s1 <http://dbpedia.org/property/image> ?o.
+?s1 a <http://dbpedia.org/ontology/Person>.
+?s1 <http://dbpedia.org/property/career> ?o1.
+}
+} 
+
+
+6.
+Original Query (count:163)
+select distinct ?s1 ?o where {
+?s1 <http://dbpedia.org/property/nationality> ?b.
+?s1 <http://dbpedia.org/property/name> ?o.
+?s1 a <http://dbpedia.org/ontology/Person>.
+?s1 <http://dbpedia.org/property/creator> ?o1.
+ }
+
+
+Rewritten Query (count:170)
+select distinct ?s1 ?o where {
+{?s1 <http://dbpedia.org/property/nationality> ?b.
+?s1 <http://dbpedia.org/property/name> ?o.
+?s1 a <http://dbpedia.org/ontology/Person>.
+?s1 <http://dbpedia.org/property/creator> ?o1.
+}
+UNION
+{?s1 <http://dbpedia.org/property/nationality> ?b.
+?s1 <http://dbpedia.org/property/name> ?o.
+?s1 a <http://dbpedia.org/ontology/Person>.
+?s1 <http://dbpedia.org/ontology/creator> ?o1.
+}
+UNION
+{?s1 <http://dbpedia.org/property/nationality> ?b.
+?s1 <http://dbpedia.org/property/name> ?o.
+?s1 a <http://dbpedia.org/ontology/Person>.
+?s1 <http://dbpedia.org/property/composer> ?o1.
+}
+UNION
+{?s1 <http://dbpedia.org/property/nationality> ?b.
+?s1 <http://dbpedia.org/property/name> ?o.
+?s1 a <http://dbpedia.org/ontology/Person>.
+?s1 <http://dbpedia.org/property/designer> ?o1.
+}
+} 
+
+
+7.
+Original Query (count:21)
+select distinct ?s1 ?o where {
+?s1 <http://dbpedia.org/property/salary> ?b.
+?s1 <http://dbpedia.org/property/name> ?o.
+?s1 a <http://dbpedia.org/ontology/Person>.
+?s1 <http://dbpedia.org/property/nationality> ?o1.
+ }
+
+
+Rewritten Query (count:58)
+select distinct ?s1 ?o where {
+{?s1 <http://dbpedia.org/property/salary> ?b.
+?s1 <http://dbpedia.org/property/name> ?o.
+?s1 a <http://dbpedia.org/ontology/Person>.
+?s1 <http://dbpedia.org/property/nationality> ?o1.
+}
+UNION
+{?s1 <http://dbpedia.org/property/salary> ?b.
+?s1 <http://dbpedia.org/property/name> ?o.
+?s1 a <http://dbpedia.org/ontology/Person>.
+?s1 <http://dbpedia.org/ontology/citizenship> ?o1.
+}
+UNION
+{?s1 <http://dbpedia.org/property/salary> ?b.
+?s1 <http://dbpedia.org/property/name> ?o.
+?s1 a <http://dbpedia.org/ontology/Person>.
+?s1 <http://dbpedia.org/ontology/nationality> ?o1.
+}
+UNION
+{?s1 <http://dbpedia.org/property/salary> ?b.
+?s1 <http://dbpedia.org/property/name> ?o.
+?s1 a <http://dbpedia.org/ontology/Person>.
+?s1 <http://dbpedia.org/property/residence> ?o1.
+}
+} 
+
+
+8.
+Original Query (count:4699)
+select distinct ?s1 ?o where {
+?s1 <http://dbpedia.org/property/caption> ?b.
+?s1 <http://dbpedia.org/property/name> ?o.
+?s1 a <http://dbpedia.org/ontology/Person>.
+?s1 <http://dbpedia.org/property/finalteam> ?o1.
+ }
+
+
+Rewritten Query (count:37935)
+select distinct ?s1 ?o where {
+{?s1 <http://dbpedia.org/property/caption> ?b.
+?s1 <http://dbpedia.org/property/name> ?o.
+?s1 a <http://dbpedia.org/ontology/Person>.
+?s1 <http://dbpedia.org/property/finalteam> ?o1.
+}
+UNION
+{?s1 <http://dbpedia.org/property/caption> ?b.
+?s1 <http://dbpedia.org/property/name> ?o.
+?s1 a <http://dbpedia.org/ontology/Person>.
+?s1 <http://dbpedia.org/property/finalleague> ?o1.
+}
+UNION
+{?s1 <http://dbpedia.org/property/caption> ?b.
+?s1 <http://dbpedia.org/property/name> ?o.
+?s1 a <http://dbpedia.org/ontology/Person>.
+?s1 <http://dbpedia.org/property/teams> ?o1.
+}
+UNION
+{?s1 <http://dbpedia.org/property/caption> ?b.
+?s1 <http://dbpedia.org/property/name> ?o.
+?s1 a <http://dbpedia.org/ontology/Person>.
+?s1 <http://dbpedia.org/ontology/team> ?o1.
+}
+} 
+9.
+Original Query (count:5667)
+select distinct ?s1 ?o where {
+?s1 <http://dbpedia.org/property/awards> ?b.
+?s1 <http://dbpedia.org/property/birthPlace> ?o.
+?s1 a <http://dbpedia.org/ontology/Person>.
+?s1 <http://dbpedia.org/property/knownFor> ?o1.
+ }
+
+
+Rewritten Query (count:5685)
+select distinct ?s1 ?o where {
+{?s1 <http://dbpedia.org/property/awards> ?b.
+?s1 <http://dbpedia.org/property/birthPlace> ?o.
+?s1 a <http://dbpedia.org/ontology/Person>.
+?s1 <http://dbpedia.org/property/knownFor> ?o1.
+}
+UNION
+{?s1 <http://dbpedia.org/property/awards> ?b.
+?s1 <http://dbpedia.org/property/birthPlace> ?o.
+?s1 a <http://dbpedia.org/ontology/Person>.
+?s1 <http://dbpedia.org/property/known> ?o1.
+}
+UNION
+{?s1 <http://dbpedia.org/property/awards> ?b.
+?s1 <http://dbpedia.org/property/birthPlace> ?o.
+?s1 a <http://dbpedia.org/ontology/Person>.
+?s1 <http://dbpedia.org/ontology/knownFor> ?o1.
+}
+UNION
+{?s1 <http://dbpedia.org/property/awards> ?b.
+?s1 <http://dbpedia.org/property/birthPlace> ?o.
+?s1 a <http://dbpedia.org/ontology/Person>.
+?s1 <http://dbpedia.org/property/knownAs> ?o1.
+}
+} 
+
+
+10.
+Original Query (count:235)
+select distinct ?s1 ?o where {
+?s1 <http://dbpedia.org/property/name> ?o.
+?s1 a <http://dbpedia.org/ontology/Person>.
+?s1 <http://dbpedia.org/property/members> ?o1.
+ }
+
+
+Rewritten Query (count:245)
+select distinct ?s1 ?o where {
+{
+?s1 <http://dbpedia.org/property/name> ?o.
+?s1 a <http://dbpedia.org/ontology/Person>.
+?s1 <http://dbpedia.org/property/members> ?o1.
+}
+UNION
+{
+?s1 <http://dbpedia.org/property/name> ?o.
+?s1 a <http://dbpedia.org/ontology/Person>.
+?s1 <http://dbpedia.org/property/contributingMembers> ?o1.
+}
+UNION
+{
+?s1 <http://dbpedia.org/property/name> ?o.
+?s1 a <http://dbpedia.org/ontology/Person>.
+?s1 <http://dbpedia.org/property/connectedmembers> ?o1.
+}
+UNION
+{
+?s1 <http://dbpedia.org/property/name> ?o.
+?s1 a <http://dbpedia.org/ontology/Person>.
+?s1 <http://dbpedia.org/property/originalMembers> ?o1.
+}
+UNION
+{
+?s1 <http://dbpedia.org/property/name> ?o.
+?s1 a <http://dbpedia.org/ontology/Person>.
+?s1 <http://dbpedia.org/property/notableMembers> ?o1.
+}
+
+
+} 
+
+
+
+
+Sport Domain
+1.
+Original Query (count:159)
+select distinct ?s1 ?o where {
+?s1 <http://purl.org/dc/terms/subject> ?b.
+?s1 <http://dbpedia.org/property/name> ?o.
+?s1 a <http://dbpedia.org/ontology/Sport>.
+?s1 <http://dbpedia.org/property/team> ?o1.
+ }
+
+
+Rewritten Query (count:193)
+select distinct ?s1 ?o where {
+{?s1 <http://purl.org/dc/terms/subject> ?b.
+?s1 <http://dbpedia.org/property/name> ?o.
+?s1 a <http://dbpedia.org/ontology/Sport>.
+?s1 <http://dbpedia.org/property/team> ?o1.
+}
+UNION
+{?s1 <http://purl.org/dc/terms/subject> ?b.
+?s1 <http://dbpedia.org/property/name> ?o.
+?s1 a <http://dbpedia.org/ontology/Sport>.
+?s1 <http://dbpedia.org/property/teamDescriptor> ?o1.
+}
+UNION
+{?s1 <http://purl.org/dc/terms/subject> ?b.
+?s1 <http://dbpedia.org/property/name> ?o.
+?s1 a <http://dbpedia.org/ontology/Sport>.
+?s1 <http://dbpedia.org/property/teams> ?o1.
+}
+UNION
+{?s1 <http://purl.org/dc/terms/subject> ?b.
+?s1 <http://dbpedia.org/property/name> ?o.
+?s1 a <http://dbpedia.org/ontology/Sport>.
+?s1 <http://dbpedia.org/property/leagues> ?o1.
+}
+} 
+
+
+Rewritten Query (count:193) 
+select distinct ?s1 ?o where {
+{?s1 <http://purl.org/dc/terms/subject> ?b.
+?s1 <http://dbpedia.org/property/name> ?o.
+?s1 a <http://dbpedia.org/ontology/Sport>.
+?s1 <http://dbpedia.org/property/team> ?o1.
+}
+UNION
+{?s1 <http://purl.org/dc/terms/subject> ?b.
+?s1 <http://dbpedia.org/property/name> ?o.
+?s1 a <http://dbpedia.org/ontology/Sport>.
+?s1 <http://dbpedia.org/property/teamDescriptor> ?o1.
+}
+UNION
+{?s1 <http://purl.org/dc/terms/subject> ?b.
+?s1 <http://dbpedia.org/property/name> ?o.
+?s1 a <http://dbpedia.org/ontology/Sport>.
+?s1 <http://dbpedia.org/property/teams> ?o1.
+}
+UNION
+{?s1 <http://purl.org/dc/terms/subject> ?b.
+?s1 <http://dbpedia.org/property/name> ?o.
+?s1 a <http://dbpedia.org/ontology/Sport>.
+?s1 <http://dbpedia.org/property/stadiumName> ?o1.
+}
+UNION
+{?s1 <http://purl.org/dc/terms/subject> ?b.
+?s1 <http://dbpedia.org/property/name> ?o.
+?s1 a <http://dbpedia.org/ontology/Sport>.
+?s1 <http://dbpedia.org/property/clubs> ?o1.
+}
+
+
+} 
+
+
+
+
+2.
+Original Query (count:17)
+select distinct ?s1 ?o where {
+?s1 <http://dbpedia.org/property/stadiumName> ?b.
+?s1 <http://purl.org/dc/terms/subject> ?o.
+?s1 a <http://dbpedia.org/ontology/Sport>.
+?s1 <http://dbpedia.org/ontology/location> ?o1.
+ }
+
+
+Rewritten Query (count:23)
+select distinct ?s1 ?o where {
+{?s1 <http://dbpedia.org/property/stadiumName> ?b.
+?s1 <http://purl.org/dc/terms/subject> ?o.
+?s1 a <http://dbpedia.org/ontology/Sport>.
+?s1 <http://dbpedia.org/ontology/location> ?o1.
+}
+UNION
+{?s1 <http://dbpedia.org/property/stadiumName> ?b.
+?s1 <http://purl.org/dc/terms/subject> ?o.
+?s1 a <http://dbpedia.org/ontology/Sport>.
+?s1 <http://dbpedia.org/property/location> ?o1.
+}
+UNION
+{?s1 <http://dbpedia.org/property/stadiumName> ?b.
+?s1 <http://purl.org/dc/terms/subject> ?o.
+?s1 a <http://dbpedia.org/ontology/Sport>.
+?s1 <http://dbpedia.org/property/hqCity> ?o1.
+}
+UNION
+{?s1 <http://dbpedia.org/property/stadiumName> ?b.
+?s1 <http://purl.org/dc/terms/subject> ?o.
+?s1 a <http://dbpedia.org/ontology/Sport>.
+?s1 <http://dbpedia.org/property/locationTown> ?o1.
+}
+} 
+
+
+
+
+3.
+Original Query (count:3)
+select distinct ?s1 ?o where {
+?s1 <http://dbpedia.org/property/location> ?b.
+?s1 <http://dbpedia.org/property/name> ?o.
+?s1 a <http://dbpedia.org/ontology/Sport>.
+?s1 <http://dbpedia.org/property/architect> ?o1.
+ }
+
+
+
+
+Rewritten Query (count:5)
+select distinct ?s1 ?o where {
+{?s1 <http://dbpedia.org/property/location> ?b.
+?s1 <http://dbpedia.org/property/name> ?o.
+?s1 a <http://dbpedia.org/ontology/Sport>.
+?s1 <http://dbpedia.org/property/architect> ?o1.
+}
+UNION
+{?s1 <http://dbpedia.org/property/location> ?b.
+?s1 <http://dbpedia.org/property/name> ?o.
+?s1 a <http://dbpedia.org/ontology/Sport>.
+?s1 <http://dbpedia.org/ontology/architect> ?o1.
+}
+UNION
+{?s1 <http://dbpedia.org/property/location> ?b.
+?s1 <http://dbpedia.org/property/name> ?o.
+?s1 a <http://dbpedia.org/ontology/Sport>.
+?s1 <http://dbpedia.org/property/operator> ?o1.
+}
+UNION
+{?s1 <http://dbpedia.org/property/location> ?b.
+?s1 <http://dbpedia.org/property/name> ?o.
+?s1 a <http://dbpedia.org/ontology/Sport>.
+?s1 <http://dbpedia.org/property/structuralEngineer> ?o1.
+}
+} 
+
+
+
+
+4.
+Original Query (count:31)
+select distinct ?s1 ?o where {
+?s1 <http://xmlns.com/foaf/0.1/homepage> ?b.
+?s1 <http://dbpedia.org/property/country> ?o.
+?s1 a <http://dbpedia.org/ontology/Sport>.
+?s1 <http://dbpedia.org/property/clubs> ?o1.
+ }
+
+
+
+
+Rewritten Query (count:48)
+select distinct ?s1 ?o where {
+{?s1 <http://xmlns.com/foaf/0.1/homepage> ?b.
+?s1 <http://dbpedia.org/property/country> ?o.
+?s1 a <http://dbpedia.org/ontology/Sport>.
+?s1 <http://dbpedia.org/property/clubs> ?o1.
+}
+UNION
+{?s1 <http://xmlns.com/foaf/0.1/homepage> ?b.
+?s1 <http://dbpedia.org/property/country> ?o.
+?s1 a <http://dbpedia.org/ontology/Sport>.
+?s1 <http://dbpedia.org/property/clubList> ?o1.
+}
+UNION
+{?s1 <http://xmlns.com/foaf/0.1/homepage> ?b.
+?s1 <http://dbpedia.org/property/country> ?o.
+?s1 a <http://dbpedia.org/ontology/Sport>.
+?s1 <http://dbpedia.org/property/union> ?o1.
+}
+UNION
+{?s1 <http://xmlns.com/foaf/0.1/homepage> ?b.
+?s1 <http://dbpedia.org/property/country> ?o.
+?s1 a <http://dbpedia.org/ontology/Sport>.
+?s1 <http://dbpedia.org/property/team> ?o1.
+}
+} 
+
+
+5.
+Original Query (count:20)
+select distinct ?s1 ?o where {
+?s1 <http://xmlns.com/foaf/0.1/homepage> ?b.
+?s1 <http://dbpedia.org/property/name> ?o.
+?s1 a <http://dbpedia.org/ontology/Sport>.
+?s1 <http://dbpedia.org/property/country> ?o1.
+ }
+
+
+
+
+Rewritten Query (count:21)
+select distinct ?s1 ?o where {
+{?s1 <http://xmlns.com/foaf/0.1/homepage> ?b.
+?s1 <http://dbpedia.org/property/name> ?o.
+?s1 a <http://dbpedia.org/ontology/Sport>.
+?s1 <http://dbpedia.org/property/country> ?o1.
+}
+UNION
+{?s1 <http://xmlns.com/foaf/0.1/homepage> ?b.
+?s1 <http://dbpedia.org/property/name> ?o.
+?s1 a <http://dbpedia.org/ontology/Sport>.
+?s1 <http://dbpedia.org/property/state> ?o1.
+}
+UNION
+{?s1 <http://xmlns.com/foaf/0.1/homepage> ?b.
+?s1 <http://dbpedia.org/property/name> ?o.
+?s1 a <http://dbpedia.org/ontology/Sport>.
+?s1 <http://dbpedia.org/ontology/state> ?o1.
+}
+UNION
+{?s1 <http://xmlns.com/foaf/0.1/homepage> ?b.
+?s1 <http://dbpedia.org/property/name> ?o.
+?s1 a <http://dbpedia.org/ontology/Sport>.
+?s1 <http://dbpedia.org/ontology/country> ?o1.
+}
+} 
+
+
+6.
+Original Query (count:1)
+select distinct ?s1 ?o where {
+?s1 <http://dbpedia.org/ontology/participant> ?b.
+?s1 <http://dbpedia.org/property/country> ?o.
+?s1 a <http://dbpedia.org/ontology/Sport>.
+?s1 <http://dbpedia.org/property/champion> ?o1.
+ }
+
+
+
+
+Rewritten Query (count:2)
+select distinct ?s1 ?o where {
+{?s1 <http://dbpedia.org/ontology/participant> ?b.
+?s1 <http://dbpedia.org/property/country> ?o.
+?s1 a <http://dbpedia.org/ontology/Sport>.
+?s1 <http://dbpedia.org/property/champion> ?o1.
+}
+UNION
+{?s1 <http://dbpedia.org/ontology/participant> ?b.
+?s1 <http://dbpedia.org/property/country> ?o.
+?s1 a <http://dbpedia.org/ontology/Sport>.
+?s1 <http://dbpedia.org/property/mostChamps> ?o1.
+}
+UNION
+{?s1 <http://dbpedia.org/ontology/participant> ?b.
+?s1 <http://dbpedia.org/property/country> ?o.
+?s1 a <http://dbpedia.org/ontology/Sport>.
+?s1 <http://dbpedia.org/property/games> ?o1.
+}
+UNION
+{?s1 <http://dbpedia.org/ontology/participant> ?b.
+?s1 <http://dbpedia.org/property/country> ?o.
+?s1 a <http://dbpedia.org/ontology/Sport>.
+?s1 <http://dbpedia.org/ontology/games> ?o1.
+}
+} 
+
+
+7.
+Original Query (count:26)
+select distinct ?s1 ?o where {
+?s1 <http://dbpedia.org/property/logo> ?b.
+?s1 <http://purl.org/dc/terms/subject> ?o.
+?s1 a <http://dbpedia.org/ontology/Sport>.
+?s1 <http://dbpedia.org/property/president> ?o1.
+ }
+
+
+
+
+Rewritten Query (count:41)
+select distinct ?s1 ?o where {
+{?s1 <http://dbpedia.org/property/logo> ?b.
+?s1 <http://purl.org/dc/terms/subject> ?o.
+?s1 a <http://dbpedia.org/ontology/Sport>.
+?s1 <http://dbpedia.org/property/president> ?o1.
+}
+UNION
+{?s1 <http://dbpedia.org/property/logo> ?b.
+?s1 <http://purl.org/dc/terms/subject> ?o.
+?s1 a <http://dbpedia.org/ontology/Sport>.
+?s1 <http://dbpedia.org/property/vicepresident> ?o1.
+}
+UNION
+{?s1 <http://dbpedia.org/property/logo> ?b.
+?s1 <http://purl.org/dc/terms/subject> ?o.
+?s1 a <http://dbpedia.org/ontology/Sport>.
+?s1 <http://dbpedia.org/property/head> ?o1.
+}
+UNION
+{?s1 <http://dbpedia.org/property/logo> ?b.
+?s1 <http://purl.org/dc/terms/subject> ?o.
+?s1 a <http://dbpedia.org/ontology/Sport>.
+?s1 <http://dbpedia.org/property/director> ?o1.
+}
+} 
+
+
+
+
+8.
+Original Query (count:19)
+select distinct ?s1 ?o where {
+?s1 <http://dbpedia.org/ontology/wikiPageID> ?b.
+?s1 <http://dbpedia.org/property/contact> ?o.
+?s1 a <http://dbpedia.org/ontology/Sport>.
+?s1 <http://dbpedia.org/property/venue> ?o1.
+ }
+
+
+
+
+Rewritten Query (count:21)
+select distinct ?s1 ?o where {
+{?s1 <http://dbpedia.org/ontology/wikiPageID> ?b.
+?s1 <http://dbpedia.org/property/contact> ?o.
+?s1 a <http://dbpedia.org/ontology/Sport>.
+?s1 <http://dbpedia.org/property/venue> ?o1.
+}
+UNION
+{?s1 <http://dbpedia.org/ontology/wikiPageID> ?b.
+?s1 <http://dbpedia.org/property/contact> ?o.
+?s1 a <http://dbpedia.org/ontology/Sport>.
+?s1 <http://dbpedia.org/property/region> ?o1.
+}
+UNION
+{?s1 <http://dbpedia.org/ontology/wikiPageID> ?b.
+?s1 <http://dbpedia.org/property/contact> ?o.
+?s1 a <http://dbpedia.org/ontology/Sport>.
+?s1 <http://dbpedia.org/property/origins> ?o1.
+}
+UNION
+{?s1 <http://dbpedia.org/ontology/wikiPageID> ?b.
+?s1 <http://dbpedia.org/property/contact> ?o.
+?s1 a <http://dbpedia.org/ontology/Sport>.
+?s1 <http://dbpedia.org/property/event> ?o1.
+}
+} 
+
+
+
+
+9.
+Original Query (count:5169)
+select distinct ?s1 ?o where {
+?s1 <http://dbpedia.org/property/paralympic> ?b.
+?s1 <http://dbpedia.org/ontology/wikiPageWikiLink> ?o.
+?s1 a <http://dbpedia.org/ontology/Sport>.
+?s1 <http://dbpedia.org/property/caption> ?o1.
+ }
+
+
+
+
+Rewritten Query (count:5646)
+select distinct ?s1 ?o where {
+{?s1 <http://dbpedia.org/property/paralympic> ?b.
+?s1 <http://dbpedia.org/ontology/wikiPageWikiLink> ?o.
+?s1 a <http://dbpedia.org/ontology/Sport>.
+?s1 <http://dbpedia.org/property/caption> ?o1.
+}
+UNION
+{?s1 <http://dbpedia.org/property/paralympic> ?b.
+?s1 <http://dbpedia.org/ontology/wikiPageWikiLink> ?o.
+?s1 a <http://dbpedia.org/ontology/Sport>.
+?s1 <http://dbpedia.org/property/title> ?o1.
+}
+UNION
+{?s1 <http://dbpedia.org/property/paralympic> ?b.
+?s1 <http://dbpedia.org/ontology/wikiPageWikiLink> ?o.
+?s1 a <http://dbpedia.org/ontology/Sport>.
+?s1 <http://dbpedia.org/property/header> ?o1.
+}
+UNION
+{?s1 <http://dbpedia.org/property/paralympic> ?b.
+?s1 <http://dbpedia.org/ontology/wikiPageWikiLink> ?o.
+?s1 a <http://dbpedia.org/ontology/Sport>.
+?s1 <http://dbpedia.org/property/category> ?o1.
+}
+} 
+
+
+10.
+Original Query (count:4)
+select distinct ?s1 ?o where {
+?s1 <http://dbpedia.org/property/team> ?b.
+?s1<http://purl.org/dc/terms/subject> ?o.
+?s1 a <http://dbpedia.org/ontology/Sport>.
+?s1 <http://dbpedia.org/property/network> ?o1.
+ }
+
+
+
+
+Rewritten Query (count:452)
+select distinct ?s1 ?o where {
+{?s1 <http://dbpedia.org/property/team> ?b.
+?s1<http://purl.org/dc/terms/subject> ?o.
+?s1 a <http://dbpedia.org/ontology/Sport>.
+?s1 <http://dbpedia.org/property/network> ?o1.
+}
+UNION
+{?s1 <http://dbpedia.org/property/team> ?b.
+?s1<http://purl.org/dc/terms/subject> ?o.
+?s1 a <http://dbpedia.org/ontology/Sport>.
+?s1 <http://dbpedia.org/property/contact> ?o1.
+}
+UNION
+{?s1 <http://dbpedia.org/property/team> ?b.
+?s1<http://purl.org/dc/terms/subject> ?o.
+?s1 a <http://dbpedia.org/ontology/Sport>.
+?s1 <http://dbpedia.org/property/union> ?o1.
+}
+UNION
+{?s1 <http://dbpedia.org/property/team> ?b.
+?s1<http://purl.org/dc/terms/subject> ?o.
+?s1 a <http://dbpedia.org/ontology/Sport>.
+?s1 <http://dbpedia.org/property/website> ?o1.
+}
+} 
+
+
+
+
+Music Domain
+1.
+Original Query (count:17)
+select distinct ?s1 ?o where {
+?s1 <http://dbpedia.org/property/artist> ?b.
+?s1 <http://dbpedia.org/property/name> ?o.
+?s1 a <http://dbpedia.org/ontology/MusicalWork>.
+?s1 <http://dbpedia.org/property/music> ?o1.
+ }
+
+
+Rewritten Query (count:67)
+select distinct ?s1 ?o where {
+{?s1 <http://dbpedia.org/property/artist> ?b.
+?s1 <http://dbpedia.org/property/name> ?o.
+?s1 a <http://dbpedia.org/ontology/MusicalWork>.
+?s1 <http://dbpedia.org/property/music> ?o.
+ }
+UNION
+{?s1 <http://dbpedia.org/property/artist> ?b.
+?s1 <http://dbpedia.org/property/name> ?o.
+?s1 a <http://dbpedia.org/ontology/MusicalWork>.
+?s1 <http://dbpedia.org/property/song> ?o .
+}
+UNION
+{?s1 <http://dbpedia.org/property/artist> ?b.
+?s1 <http://dbpedia.org/property/name> ?o.
+?s1 a <http://dbpedia.org/ontology/MusicalWork>.
+?s1 <http://dbpedia.org/property/musicBy> ?o .
+}
+UNION
+{?s1 <http://dbpedia.org/property/artist> ?b.
+?s1 <http://dbpedia.org/property/name> ?o.
+?s1 a <http://dbpedia.org/ontology/MusicalWork>.
+?s1 <http://dbpedia.org/property/lmusic> ?o .
+}
+UNION
+{?s1 <http://dbpedia.org/property/artist> ?b.
+?s1 <http://dbpedia.org/property/name> ?o.
+?s1 a <http://dbpedia.org/ontology/MusicalWork>.
+?s1 <http://dbpedia.org/property/allMusic> ?o .
+}
+} 
+
+
+
+
+2.
+Original Query (count:5847)
+select distinct ?s1 ?o where {
+?s1 <http://dbpedia.org/property/name> ?b.
+?s1 <http://dbpedia.org/property/caption> ?o1.
+?s1 a <http://dbpedia.org/ontology/MusicalWork>.
+?s1 <http://dbpedia.org/property/artist> ?o.
+ }
+Rewritten Query (count:5923)
+select distinct ?s1 ?o where {
+{?s1 <http://dbpedia.org/property/name> ?b.
+?s1 <http://dbpedia.org/property/caption> ?o1.
+?s1 a <http://dbpedia.org/ontology/MusicalWork>.
+?s1 <http://dbpedia.org/property/artist> ?o.
+ }
+UNION
+{?s1 <http://dbpedia.org/property/name> ?b.
+?s1 <http://dbpedia.org/property/caption> ?o1.
+?s1 a <http://dbpedia.org/ontology/MusicalWork>.
+?s1 <http://dbpedia.org/property/narrator> ?o .
+}
+UNION
+{?s1 <http://dbpedia.org/property/name> ?b.
+?s1 <http://dbpedia.org/property/caption> ?o1.
+?s1 a <http://dbpedia.org/ontology/MusicalWork>.
+?s1 <http://dbpedia.org/ontology/starring> ?o .
+}
+UNION
+{?s1 <http://dbpedia.org/property/name> ?b.
+?s1 <http://dbpedia.org/property/caption> ?o1.
+?s1 a <http://dbpedia.org/ontology/MusicalWork>.
+?s1 <http://dbpedia.org/property/starring> ?o .
+}
+} 
+
+
+
+
+3.
+Original Query (count:82)
+select distinct ?s1 ?o where {
+?s1 <http://dbpedia.org/property/director> ?b.
+?s1 <http://dbpedia.org/property/language> ?o1.
+?s1 a <http://dbpedia.org/ontology/MusicalWork>.
+?s1 <http://dbpedia.org/property/genre> ?o.
+ }
+Rewritten Query (count:258)
+select distinct ?s1 ?o where {
+{?s1 <http://dbpedia.org/property/director> ?b.
+?s1 <http://dbpedia.org/property/language> ?o1.
+?s1 a <http://dbpedia.org/ontology/MusicalWork>.
+?s1 <http://dbpedia.org/property/genre> ?o.
+ }
+UNION
+{?s1 <http://dbpedia.org/property/director> ?b.
+?s1 <http://dbpedia.org/property/language> ?o1.
+?s1 a <http://dbpedia.org/ontology/MusicalWork>.
+?s1 <http://dbpedia.org/property/type> ?o .
+}
+UNION
+{?s1 <http://dbpedia.org/property/director> ?b.
+?s1 <http://dbpedia.org/property/language> ?o1.
+?s1 a <http://dbpedia.org/ontology/MusicalWork>.
+?s1 <http://dbpedia.org/property/headline> ?o .
+}
+UNION
+{?s1 <http://dbpedia.org/property/director> ?b.
+?s1 <http://dbpedia.org/property/language> ?o1.
+?s1 a <http://dbpedia.org/ontology/MusicalWork>.
+?s1 <http://dbpedia.org/property/label> ?o .
+}
+} 
+
+
+4.
+Original Query (count:9)
+select distinct ?s1 ?o where {
+?s1 <http://dbpedia.org/ontology/activeYearsStartYear> ?b.
+?s1 <http://dbpedia.org/property/name> ?o1.
+?s1 a <http://dbpedia.org/ontology/MusicalWork>.
+?s1 <http://dbpedia.org/ontology/occupation> ?o.
+ }
+Rewritten Query (count:13)
+select distinct ?s1 ?o where {
+{?s1 <http://dbpedia.org/ontology/activeYearsStartYear> ?b.
+?s1 <http://dbpedia.org/property/name> ?o1.
+?s1 a <http://dbpedia.org/ontology/MusicalWork>.
+?s1 <http://dbpedia.org/ontology/occupation> ?o.
+ }
+UNION
+{?s1 <http://dbpedia.org/ontology/activeYearsStartYear> ?b.
+?s1 <http://dbpedia.org/property/name> ?o1.
+?s1 a <http://dbpedia.org/ontology/MusicalWork>.
+?s1 <http://dbpedia.org/property/works> ?o .
+}
+UNION
+{?s1 <http://dbpedia.org/ontology/activeYearsStartYear> ?b.
+?s1 <http://dbpedia.org/property/name> ?o1.
+?s1 a <http://dbpedia.org/ontology/MusicalWork>.
+?s1 <http://dbpedia.org/property/position> ?o .
+}
+UNION
+{?s1 <http://dbpedia.org/ontology/activeYearsStartYear> ?b.
+?s1 <http://dbpedia.org/property/name> ?o1.
+?s1 a <http://dbpedia.org/ontology/MusicalWork>.
+?s1 <http://dbpedia.org/property/occupation> ?o .
+}
+} 
+
+
+5.
+Original Query (count:3896)
+select distinct ?s1 ?o where {
+?s1 <http://dbpedia.org/property/artist> ?b.
+?s1 <http://dbpedia.org/property/album> ?o1.
+?s1 a <http://dbpedia.org/ontology/MusicalWork>.
+?s1 <http://dbpedia.org/property/studio> ?o.
+ }
+Rewritten Query (count:3925)
+select distinct ?s1 ?o where {
+{?s1 <http://dbpedia.org/property/artist> ?b.
+?s1 <http://dbpedia.org/property/album> ?o1.
+?s1 a <http://dbpedia.org/ontology/MusicalWork>.
+?s1 <http://dbpedia.org/property/studio> ?o.
+ }
+UNION
+{?s1 <http://dbpedia.org/property/artist> ?b.
+?s1 <http://dbpedia.org/property/album> ?o1.
+?s1 a <http://dbpedia.org/ontology/MusicalWork>.
+?s1 <http://dbpedia.org/property/location> ?o .
+}
+UNION
+{?s1 <http://dbpedia.org/property/artist> ?b.
+?s1 <http://dbpedia.org/property/album> ?o1.
+?s1 a <http://dbpedia.org/ontology/MusicalWork>.
+?s1 <http://dbpedia.org/ontology/location> ?o .
+}
+UNION
+{?s1 <http://dbpedia.org/property/artist> ?b.
+?s1 <http://dbpedia.org/property/album> ?o1.
+?s1 a <http://dbpedia.org/ontology/MusicalWork>.
+?s1 <http://dbpedia.org/property/company> ?o .
+}
+} 
+
+
+6.
+Original Query (count:956)
+select distinct ?s1 ?o where {
+?s1 <http://dbpedia.org/property/label> ?b.
+?s1 <http://dbpedia.org/property/length> ?o1.
+?s1 a <http://dbpedia.org/ontology/MusicalWork>.
+?s1 <http://dbpedia.org/property/composer> ?o.
+ }
+
+
+Rewritten Query (count:175710)
+select distinct ?s1 ?o where {
+{?s1 <http://dbpedia.org/property/label> ?b.
+?s1 <http://dbpedia.org/property/length> ?o1.
+?s1 a <http://dbpedia.org/ontology/MusicalWork>.
+?s1 <http://dbpedia.org/property/composer> ?o.
+}
+UNION
+{?s1 <http://dbpedia.org/property/label> ?b.
+?s1 <http://dbpedia.org/property/length> ?o1.
+?s1 a <http://dbpedia.org/ontology/MusicalWork>.
+?s1 <http://dbpedia.org/ontology/composer> ?o.
+}
+UNION
+{?s1 <http://dbpedia.org/property/label> ?b.
+?s1 <http://dbpedia.org/property/length> ?o1.
+?s1 a <http://dbpedia.org/ontology/MusicalWork>.
+?s1 <http://dbpedia.org/ontology/writer> ?o.
+}
+UNION
+{?s1 <http://dbpedia.org/property/label> ?b.
+?s1 <http://dbpedia.org/property/length> ?o1.
+?s1 a <http://dbpedia.org/ontology/MusicalWork>.
+?s1 <http://dbpedia.org/property/writer> ?o.
+}
+} 
+
+
+7.
+Original Query (count:33)
+select distinct ?s1 ?o where {
+?s1 <http://dbpedia.org/property/type> ?b.
+?s1 <http://dbpedia.org/property/artist> ?o1.
+?s1 a <http://dbpedia.org/ontology/MusicalWork>.
+?s1 <http://dbpedia.org/property/place> ?o.
+ }
+
+
+Rewritten Query (count:144)
+select distinct ?s1 ?o where {
+{?s1 <http://dbpedia.org/property/type> ?b.
+?s1 <http://dbpedia.org/property/artist> ?o1.
+?s1 a <http://dbpedia.org/ontology/MusicalWork>.
+?s1 <http://dbpedia.org/property/place> ?o.
+}
+UNION
+{?s1 <http://dbpedia.org/property/type> ?b.
+?s1 <http://dbpedia.org/property/artist> ?o1.
+?s1 a <http://dbpedia.org/ontology/MusicalWork>.
+?s1 <http://dbpedia.org/property/placeSemi> ?o.
+}
+UNION
+{?s1 <http://dbpedia.org/property/type> ?b.
+?s1 <http://dbpedia.org/property/artist> ?o1.
+?s1 a <http://dbpedia.org/ontology/MusicalWork>.
+?s1 <http://dbpedia.org/property/region> ?o.
+}
+UNION
+{?s1 <http://dbpedia.org/property/type> ?b.
+?s1 <http://dbpedia.org/property/artist> ?o1.
+?s1 a <http://dbpedia.org/ontology/MusicalWork>.
+?s1 <http://dbpedia.org/property/country> ?o.
+}
+} 
+
+
+8.
+Original Query (count:63)
+select distinct ?s1 ?o where {
+?s1 <http://dbpedia.org/ontology/musicBy> ?b.
+?s1 <http://dbpedia.org/property/name> ?o1.
+?s1 a <http://dbpedia.org/ontology/MusicalWork>.
+?s1 <http://dbpedia.org/ontology/award> ?o.
+ }
+
+
+Rewritten Query (count:195)
+select distinct ?s1 ?o where {
+{?s1 <http://dbpedia.org/ontology/musicBy> ?b.
+?s1 <http://dbpedia.org/property/name> ?o1.
+?s1 a <http://dbpedia.org/ontology/MusicalWork>.
+?s1 <http://dbpedia.org/ontology/award> ?o.
+}
+UNION
+{?s1 <http://dbpedia.org/ontology/musicBy> ?b.
+?s1 <http://dbpedia.org/property/name> ?o1.
+?s1 a <http://dbpedia.org/ontology/MusicalWork>.
+?s1 <http://dbpedia.org/property/award> ?o.
+}
+UNION
+{?s1 <http://dbpedia.org/ontology/musicBy> ?b.
+?s1 <http://dbpedia.org/property/name> ?o1.
+?s1 a <http://dbpedia.org/ontology/MusicalWork>.
+?s1 <http://dbpedia.org/property/awards> ?o.
+}
+} 
+
+
+9.
+Original Query (count:164784)
+select distinct ?s1 ?o where {
+?s1 <http://dbpedia.org/property/genre> ?b.
+?s1 <http://purl.org/dc/terms/subject> ?o1.
+?s1 a <http://dbpedia.org/ontology/MusicalWork>.
+?s1 <http://dbpedia.org/property/cover> ?o.
+ }
+
+
+Rewritten Query (count:214556)
+select distinct ?s1 ?o where {
+{?s1 <http://dbpedia.org/property/genre> ?b.
+?s1 <http://purl.org/dc/terms/subject> ?o1.
+?s1 a <http://dbpedia.org/ontology/MusicalWork>.
+?s1 <http://dbpedia.org/property/cover> ?o.
+}
+UNION
+{?s1 <http://dbpedia.org/property/genre> ?b.
+?s1 <http://purl.org/dc/terms/subject> ?o1.
+?s1 a <http://dbpedia.org/ontology/MusicalWork>.
+?s1 <http://dbpedia.org/property/label> ?o.
+}
+UNION
+{?s1 <http://dbpedia.org/property/genre> ?b.
+?s1 <http://purl.org/dc/terms/subject> ?o1.
+?s1 a <http://dbpedia.org/ontology/MusicalWork>.
+?s1 <http://dbpedia.org/ontology/recordLabel> ?o.
+}
+UNION
+{?s1 <http://dbpedia.org/property/genre> ?b.
+?s1 <http://purl.org/dc/terms/subject> ?o1.
+?s1 a <http://dbpedia.org/ontology/MusicalWork>.
+?s1 <http://dbpedia.org/property/labels> ?o.
+}
+} 
+
+
+
+
+10.
+Original Query (count:4)
+select distinct ?s1 ?o where {
+?s1 <http://dbpedia.org/ontology/occupation> ?b.
+?s1 <http://dbpedia.org/property/name> ?o1.
+?s1 a <http://dbpedia.org/ontology/MusicalWork>.
+?s1 <http://dbpedia.org/ontology/activeYearsStartYear> ?o.
+ }
+
+
+Rewritten Query (count:8)
+select distinct ?s1 ?o where {
+{?s1 <http://dbpedia.org/ontology/occupation> ?b.
+?s1 <http://dbpedia.org/property/name> ?o1.
+?s1 a <http://dbpedia.org/ontology/MusicalWork>.
+?s1 <http://dbpedia.org/ontology/activeYearsStartYear> ?o.
+}
+UNION
+{?s1 <http://dbpedia.org/ontology/occupation> ?b.
+?s1 <http://dbpedia.org/property/name> ?o1.
+?s1 a <http://dbpedia.org/ontology/MusicalWork>.
+?s1 <http://dbpedia.org/property/yearsactive> ?o.
+}
+UNION
+{?s1 <http://dbpedia.org/ontology/occupation> ?b.
+?s1 <http://dbpedia.org/property/name> ?o1.
+?s1 a <http://dbpedia.org/ontology/MusicalWork>.
+?s1 <http://dbpedia.org/property/yearsActive> ?o.
+}
+} 
+
+
+History Domain
+1.
+Original Query (count:2)
+select distinct ?s1 ?o where {
+?s1 <http://dbpedia.org/property/type> ?b.
+?s1 <http://dbpedia.org/property/name> ?o1.
+?s1 a <http://dbpedia.org/ontology/HistoricPlace>.
+?s1 <http://dbpedia.org/ontology/country> ?o.
+ }
+
+
+Rewritten Query (count:13)
+select distinct ?s1 ?o where {
+{?s1 <http://dbpedia.org/property/type> ?b.
+?s1 <http://dbpedia.org/property/name> ?o1.
+?s1 a <http://dbpedia.org/ontology/HistoricPlace>.
+?s1 <http://dbpedia.org/ontology/country> ?o.
+}
+UNION
+{?s1 <http://dbpedia.org/property/type> ?b.
+?s1 <http://dbpedia.org/property/name> ?o1.
+?s1 a <http://dbpedia.org/ontology/HistoricPlace>.
+?s1 <http://dbpedia.org/property/country> ?o.
+}
+UNION
+{?s1 <http://dbpedia.org/property/type> ?b.
+?s1 <http://dbpedia.org/property/name> ?o1.
+?s1 a <http://dbpedia.org/ontology/HistoricPlace>.
+?s1 <http://dbpedia.org/ontology/locationCountry> ?o.
+}
+UNION
+{?s1 <http://dbpedia.org/property/type> ?b.
+?s1 <http://dbpedia.org/property/name> ?o1.
+?s1 a <http://dbpedia.org/ontology/HistoricPlace>.
+?s1 <http://dbpedia.org/property/locationCountry> ?o.
+}
+} 
+
+
+
+
+2.
+Original Query (count:1)
+select distinct ?s1 ?o where {
+?s1 <http://dbpedia.org/property/year> ?b.
+?s1 <http://dbpedia.org/property/name> ?o1.
+?s1 a <http://dbpedia.org/ontology/HistoricPlace>.
+?s1 <http://dbpedia.org/property/title> ?o.
+ }
+
+
+Rewritten Query (count:734)
+select distinct ?s1 ?o where {
+{?s1 <http://dbpedia.org/property/year> ?b.
+?s1 <http://dbpedia.org/property/name> ?o1.
+?s1 a <http://dbpedia.org/ontology/HistoricPlace>.
+?s1 <http://dbpedia.org/property/title> ?o.
+}
+UNION
+{?s1 <http://dbpedia.org/property/year> ?b.
+?s1 <http://dbpedia.org/property/name> ?o1.
+?s1 a <http://dbpedia.org/ontology/HistoricPlace>.
+?s1 <http://dbpedia.org/property/caption> ?o.
+}
+UNION
+{?s1 <http://dbpedia.org/property/year> ?b.
+?s1 <http://dbpedia.org/property/name> ?o1.
+?s1 a <http://dbpedia.org/ontology/HistoricPlace>.
+?s1 <http://dbpedia.org/property/description> ?o.
+}
+UNION
+{?s1 <http://dbpedia.org/property/year> ?b.
+?s1 <http://dbpedia.org/property/name> ?o1.
+?s1 a <http://dbpedia.org/ontology/HistoricPlace>.
+?s1 <http://dbpedia.org/property/label> ?o.
+}
+} 
+
+
+
+
+
+
+3.
+Original Query (count:361)
+select distinct ?s1 ?o where {
+?s1 <http://dbpedia.org/property/partof> ?b.
+?s1 <http://purl.org/dc/terms/subject> ?o1.
+?s1 a <http://dbpedia.org/ontology/HistoricPlace>.
+?s1 <http://dbpedia.org/property/architect> ?o.
+ }
+
+
+Rewritten Query (count:400)
+select distinct ?s1 ?o where {
+{?s1 <http://dbpedia.org/property/partof> ?b.
+?s1 <http://purl.org/dc/terms/subject> ?o1.
+?s1 a <http://dbpedia.org/ontology/HistoricPlace>.
+?s1 <http://dbpedia.org/property/architect> ?o.
+}
+UNION
+{?s1 <http://dbpedia.org/property/partof> ?b.
+?s1 <http://purl.org/dc/terms/subject> ?o1.
+?s1 a <http://dbpedia.org/ontology/HistoricPlace>.
+?s1 <http://dbpedia.org/ontology/architect> ?o.
+}
+UNION
+{?s1 <http://dbpedia.org/property/partof> ?b.
+?s1 <http://purl.org/dc/terms/subject> ?o1.
+?s1 a <http://dbpedia.org/ontology/HistoricPlace>.
+?s1 <http://dbpedia.org/ontology/builder> ?o.
+}
+UNION
+{?s1 <http://dbpedia.org/property/partof> ?b.
+?s1 <http://purl.org/dc/terms/subject> ?o1.
+?s1 a <http://dbpedia.org/ontology/HistoricPlace>.
+?s1 <http://dbpedia.org/property/architectOrBuilder> ?o.
+}
+} 
+
+
+4.
+Original Query (count:10)
+select distinct ?s1 ?o where {
+?s1 <http://dbpedia.org/ontology/wikiPageWikiLink> ?b.
+?s1 <http://dbpedia.org/property/type> ?o1.
+?s1 a <http://dbpedia.org/ontology/HistoricPlace>.
+?s1 <http://dbpedia.org/property/country> ?o.
+ }
+
+
+Rewritten Query (count:20)
+select distinct ?s1 ?o where {
+{?s1 <http://dbpedia.org/ontology/wikiPageWikiLink> ?b.
+?s1 <http://dbpedia.org/property/type> ?o1.
+?s1 a <http://dbpedia.org/ontology/HistoricPlace>.
+?s1 <http://dbpedia.org/property/country> ?o.
+}
+UNION
+{?s1 <http://dbpedia.org/ontology/wikiPageWikiLink> ?b.
+?s1 <http://dbpedia.org/property/type> ?o1.
+?s1 a <http://dbpedia.org/ontology/HistoricPlace>.
+?s1 <http://dbpedia.org/ontology/country> ?o.
+}
+UNION
+{?s1 <http://dbpedia.org/ontology/wikiPageWikiLink> ?b.
+?s1 <http://dbpedia.org/property/type> ?o1.
+?s1 a <http://dbpedia.org/ontology/HistoricPlace>.
+?s1 <http://dbpedia.org/property/state> ?o.
+}
+UNION
+{?s1 <http://dbpedia.org/ontology/wikiPageWikiLink> ?b.
+?s1 <http://dbpedia.org/property/type> ?o1.
+?s1 a <http://dbpedia.org/ontology/HistoricPlace>.
+?s1 <http://dbpedia.org/ontology/state> ?o.
+}
+} 
+
+
+5.
+Original Query (count:47)
+select distinct ?s1 ?o where {
+?s1 <http://dbpedia.org/property/cultures> ?b.
+?s1 <http://dbpedia.org/ontology/abstract> ?o1.
+?s1 a <http://dbpedia.org/ontology/HistoricPlace>.
+?s1 <http://dbpedia.org/property/region> ?o.
+ }
+
+
+Rewritten Query (count:120)
+select distinct ?s1 ?o where {
+{?s1 <http://dbpedia.org/property/cultures> ?b.
+?s1 <http://dbpedia.org/ontology/abstract> ?o1.
+?s1 a <http://dbpedia.org/ontology/HistoricPlace>.
+?s1 <http://dbpedia.org/property/region> ?o.
+}
+UNION
+{?s1 <http://dbpedia.org/property/cultures> ?b.
+?s1 <http://dbpedia.org/ontology/abstract> ?o1.
+?s1 a <http://dbpedia.org/ontology/HistoricPlace>.
+?s1 <http://dbpedia.org/ontology/area> ?o.
+}
+UNION
+{?s1 <http://dbpedia.org/property/cultures> ?b.
+?s1 <http://dbpedia.org/ontology/abstract> ?o1.
+?s1 a <http://dbpedia.org/ontology/HistoricPlace>.
+?s1 <http://dbpedia.org/property/location> ?o.
+}
+UNION
+{?s1 <http://dbpedia.org/property/cultures> ?b.
+?s1 <http://dbpedia.org/ontology/abstract> ?o1.
+?s1 a <http://dbpedia.org/ontology/HistoricPlace>.
+?s1 <http://dbpedia.org/ontology/place> ?o.
+}
+} 
+
+
+6.
+Original Query (count:10)
+select distinct ?s1 ?o where {
+?s1 <http://dbpedia.org/property/country> ?b.
+?s1 <http://dbpedia.org/ontology/area> ?o1.
+?s1 a <http://dbpedia.org/ontology/HistoricPlace>.
+?s1 <http://dbpedia.org/property/caption> ?o.
+ }
+
+
+Rewritten Query (count:17)
+select distinct ?s1 ?o where {
+{?s1 <http://dbpedia.org/property/country> ?b.
+?s1 <http://dbpedia.org/ontology/area> ?o1.
+?s1 a <http://dbpedia.org/ontology/HistoricPlace>.
+?s1 <http://dbpedia.org/property/caption> ?o.
+}
+UNION
+{?s1 <http://dbpedia.org/property/country> ?b.
+?s1 <http://dbpedia.org/ontology/area> ?o1.
+?s1 a <http://dbpedia.org/ontology/HistoricPlace>.
+?s1 <http://dbpedia.org/property/serviceHeader> ?o.
+}
+UNION
+{?s1 <http://dbpedia.org/property/country> ?b.
+?s1 <http://dbpedia.org/ontology/area> ?o1.
+?s1 a <http://dbpedia.org/ontology/HistoricPlace>.
+?s1 <http://dbpedia.org/property/header> ?o.
+}
+UNION
+{?s1 <http://dbpedia.org/property/country> ?b.
+?s1 <http://dbpedia.org/ontology/area> ?o1.
+?s1 a <http://dbpedia.org/ontology/HistoricPlace>.
+?s1 <http://dbpedia.org/property/title> ?o.
+}
+} 
+
+
+7.
+Original Query (count:1)
+select distinct ?s1 ?o where {
+?s1 <http://dbpedia.org/property/staff> ?b.
+?s1 <http://purl.org/dc/terms/subject> ?o1.
+?s1 a <http://dbpedia.org/ontology/HistoricPlace>.
+?s1 <http://dbpedia.org/property/president> ?o.
+ }
+
+
+Rewritten Query (count:2)
+select distinct ?s1 ?o where {
+{?s1 <http://dbpedia.org/property/staff> ?b.
+?s1 <http://purl.org/dc/terms/subject> ?o1.
+?s1 a <http://dbpedia.org/ontology/HistoricPlace>.
+?s1 <http://dbpedia.org/property/president> ?o.
+}
+UNION
+{?s1 <http://dbpedia.org/property/staff> ?b.
+?s1 <http://purl.org/dc/terms/subject> ?o1.
+?s1 a <http://dbpedia.org/ontology/HistoricPlace>.
+?s1 <http://dbpedia.org/property/vicepresident> ?o.
+}
+UNION
+{?s1 <http://dbpedia.org/property/staff> ?b.
+?s1 <http://purl.org/dc/terms/subject> ?o1.
+?s1 a <http://dbpedia.org/ontology/HistoricPlace>.
+?s1 <http://dbpedia.org/property/head> ?o.
+}
+UNION
+{?s1 <http://dbpedia.org/property/staff> ?b.
+?s1 <http://purl.org/dc/terms/subject> ?o1.
+?s1 a <http://dbpedia.org/ontology/HistoricPlace>.
+?s1 <http://dbpedia.org/property/director> ?o.
+}
+} 
+
+
+8.
+Original Query (count:34836)
+select distinct ?s1 ?o where {
+?s1 <http://dbpedia.org/ontology/wikiPageWikiLink> ?b.
+?s1 <http://purl.org/dc/terms/subject> ?o1.
+?s1 a <http://dbpedia.org/ontology/HistoricPlace>.
+?s1 <http://dbpedia.org/property/name> ?o.
+ }
+
+
+Rewritten Query (count:34844)
+select distinct ?s1 ?o where {
+{?s1 <http://dbpedia.org/ontology/wikiPageWikiLink> ?b.
+?s1 <http://purl.org/dc/terms/subject> ?o1.
+?s1 a <http://dbpedia.org/ontology/HistoricPlace>.
+?s1 <http://dbpedia.org/property/name> ?o.
+}
+UNION
+{?s1 <http://dbpedia.org/ontology/wikiPageWikiLink> ?b.
+?s1 <http://purl.org/dc/terms/subject> ?o1.
+?s1 a <http://dbpedia.org/ontology/HistoricPlace>.
+?s1 <http://dbpedia.org/property/alternateNames> ?o.
+}
+UNION
+{?s1 <http://dbpedia.org/ontology/wikiPageWikiLink> ?b.
+?s1 <http://purl.org/dc/terms/subject> ?o1.
+?s1 a <http://dbpedia.org/ontology/HistoricPlace>.
+?s1 <http://dbpedia.org/property/namedFor> ?o.
+}
+UNION
+{?s1 <http://dbpedia.org/ontology/wikiPageWikiLink> ?b.
+?s1 <http://purl.org/dc/terms/subject> ?o1.
+?s1 a <http://dbpedia.org/ontology/HistoricPlace>.
+?s1 <http://dbpedia.org/property/buildingName> ?o.
+}
+} 
+
+
+9.
+Original Query (count:1)
+select distinct ?s1 ?o where {
+?s1 <http://dbpedia.org/property/architecture> ?b.
+?s1 <http://purl.org/dc/terms/subject>  ?o1.
+?s1 a <http://dbpedia.org/ontology/HistoricPlace>.
+?s1 <http://dbpedia.org/property/photo> ?o.
+ }
+
+
+Rewritten Query (count:245)
+select distinct ?s1 ?o where {
+{?s1 <http://dbpedia.org/property/architecture> ?b.
+?s1 <http://purl.org/dc/terms/subject>  ?o1.
+?s1 a <http://dbpedia.org/ontology/HistoricPlace>.
+?s1 <http://dbpedia.org/property/photo> ?o.
+}
+UNION
+{?s1 <http://dbpedia.org/property/architecture> ?b.
+?s1 <http://purl.org/dc/terms/subject>  ?o1.
+?s1 a <http://dbpedia.org/ontology/HistoricPlace>.
+?s1 <http://dbpedia.org/property/image> ?o.
+}
+UNION
+{?s1 <http://dbpedia.org/property/architecture> ?b.
+?s1 <http://purl.org/dc/terms/subject>  ?o1.
+?s1 a <http://dbpedia.org/ontology/HistoricPlace>.
+?s1 <http://dbpedia.org/property/photos> ?o.
+}
+UNION
+{?s1 <http://dbpedia.org/property/architecture> ?b.
+?s1 <http://purl.org/dc/terms/subject>  ?o1.
+?s1 a <http://dbpedia.org/ontology/HistoricPlace>.
+?s1 <http://dbpedia.org/property/picture> ?o.
+}
+} 
+
+
+10.
+Original Query (count:2)
+select distinct ?s1 ?o where {
+?s1 <http://dbpedia.org/property/type> ?b.
+?s1 <http://dbpedia.org/property/location> ?o1.
+?s1 a <http://dbpedia.org/ontology/HistoricPlace>.
+?s1 <http://dbpedia.org/property/age> ?o.
+ }
+
+
+Rewritten Query (count:67)
+select distinct ?s1 ?o where {
+{?s1 <http://dbpedia.org/property/type> ?b.
+?s1 <http://dbpedia.org/property/location> ?o1.
+?s1 a <http://dbpedia.org/ontology/HistoricPlace>.
+?s1 <http://dbpedia.org/property/age> ?o.
+}
+UNION
+{?s1 <http://dbpedia.org/property/type> ?b.
+?s1 <http://dbpedia.org/property/location> ?o1.
+?s1 a <http://dbpedia.org/ontology/HistoricPlace>.
+?s1 <http://dbpedia.org/ontology/yearOfConstruction> ?o.
+}
+UNION
+{?s1 <http://dbpedia.org/property/type> ?b.
+?s1 <http://dbpedia.org/property/location> ?o1.
+?s1 a <http://dbpedia.org/ontology/HistoricPlace>.
+?s1 <http://dbpedia.org/property/alt> ?o.
+}
+UNION
+{?s1 <http://dbpedia.org/property/type> ?b.
+?s1 <http://dbpedia.org/property/location> ?o1.
+?s1 a <http://dbpedia.org/ontology/HistoricPlace>.
+?s1 <http://dbpedia.org/property/years> ?o.
+}
+}
