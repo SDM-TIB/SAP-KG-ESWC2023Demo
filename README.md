@@ -1,5 +1,5 @@
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/SDM-TIB/SAP-KG-ESWC2023Demo/main?labpath=SAP-KG.ipynb)
-
+[![DOI](https://zenodo.org/badge/627836146.svg)](https://zenodo.org/badge/latestdoi/627836146)
 
 ## SAP-KG: Synonym Predicate Analyzer across Multiple Knowledge Graphs
 
