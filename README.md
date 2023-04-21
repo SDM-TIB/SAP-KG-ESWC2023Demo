@@ -3,7 +3,7 @@
 
 ## SAP-KG: Synonym Predicate Analyzer across Multiple Knowledge Graphs
 
-![SAP-KG](/images/DemoArch1.png?raw=true "SAP-KG")
+![SAP-KG](/images/DemoArch.png?raw=true "SAP-KG")
 
 
 In community-maintained knowledge graphs contain millions of facts, contributors can introduce new predicates that have similar meanings to other predicates in the KG, known as synonym predicates. We present SAP-KG, a knowledge graph-agnostic approach, to illustrate the benefits of identifying these synonym predicates that provide complementary information and using them in rewriting SPARQL queries to retrieve the complete result. SAP-KG proposed a metric to compute the percentage of overlap between pairs of synonym predicate candidates and capture the most similar predicates which can complement each other. Additionally, we present a query processing technique that put in perspective the role of synonym predicates in query answer completeness.
