@@ -7,3 +7,9 @@ wdt:P19,place of birth
 wdt:P1464,category for people born here
 wdt:P40,child
 wdt:P1038,relative
+http://dbpedia.org/property/birthPlace,dbp:birthPlace
+http://dbpedia.org/property/deathCause,dbp:deathCause
+http://dbpedia.org/ontology/mother,dbo:mother
+http://dbpedia.org/ontology/father,dbo:father
+http://dbpedia.org/ontology/relative,dbo:relative
+http://dbpedia.org/ontology/child,dbo:child
